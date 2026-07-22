@@ -11,267 +11,318 @@
 <meta property="og:url" content="https://aboutcollab.github.io/wedding-camping/">
 <meta property="og:title" content="⛺ Camping do casamento · 26-28 ago 2026">
 <meta property="og:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, vilinha de barracas a 2,5 km da festa. ~€65-85 tudo incluído. Responde até dom 26/7. Helena">
-<meta property="og:image" content="https://aboutcollab.github.io/wedding-camping/og.png">
+<meta property="og:image" content="https://aboutcollab.github.io/wedding-camping/og.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Barracas na duna com o mar ao fundo, camping do casamento da Maeli e da Marieke, 26 a 28 de agosto de 2026">
+<meta property="og:image:alt" content="Maeli e Marieke, em letra manuscrita rosa, com flores de cerejeira. O camping do casamento, 26 a 28 de agosto de 2026">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="⛺ Camping do casamento · 26-28 ago 2026">
 <meta name="twitter:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, três dias, ~€65-85 tudo incluído. Responde até dom 26/7.">
-<meta name="twitter:image" content="https://aboutcollab.github.io/wedding-camping/og.png">
-<meta name="theme-color" content="#0C3B42">
+<meta name="twitter:image" content="https://aboutcollab.github.io/wedding-camping/og.png?v=2">
+<meta name="theme-color" content="#F5E7F0">
 <meta name="robots" content="noindex">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C3B42'/%3E%3Ccircle cx='46' cy='19' r='9' fill='%23FF6B4A'/%3E%3Cpath d='M6 46 L22 22 L38 46 Z' fill='%23F4E7CF'/%3E%3Cpath d='M17 46 L22 32 L27 46 Z' fill='%23175E66'/%3E%3Crect x='0' y='46' width='64' height='4' fill='%23E7D2AC'/%3E%3C/svg%3E">
+<!-- same mark as the wedding hub: five pink petals -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFFFFF'/%3E%3Cg fill='%23F81878'%3E%3Ccircle cx='32' cy='19' r='8'/%3E%3Ccircle cx='45' cy='28' r='8'/%3E%3Ccircle cx='40' cy='43' r='8'/%3E%3Ccircle cx='24' cy='43' r='8'/%3E%3Ccircle cx='19' cy='28' r='8'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='6' fill='%23FBD4E4'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=DM+Mono:wght@400;500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+  /* ═══════════════════════════════════════════════════════════════
+     O sistema visual do casamento, tirado do convite.
+     Os mesmos tokens do hub em aboutcollab.github.io/maeli-marieke-wedding
+     e do site do ônibus, pra tudo parecer a mesma coisa.
+     ═══════════════════════════════════════════════════════════════ */
   :root{
-    --mar:#175E66;          /* mar do norte */
-    --fundo:#0C3B42;        /* mar fundo / noite */
-    --areia:#F4E7CF;
-    --areia-molhada:#E7D2AC;
-    --espuma:#FBF7EF;
-    --sol:#FF6B4A;          /* sol de fim de tarde */
-    --tinta:#1B2B2E;
-    --tinta-suave:#4A6265;
-    --borda:#E2D9C6;
-
-    --display:"Archivo", "Avenir Next Condensed", Helvetica, sans-serif;
-    --corpo:"Karla", -apple-system, "Segoe UI", sans-serif;
-    --mono:"DM Mono", ui-monospace, Menlo, monospace;
+    --paper:#FFFFFF;
+    --blush:#F5E7F0;      /* o fundo da página 4 do convite */
+    --blush-deep:#F0DAE8;
+    --pink:#F81878;       /* o rosa do wordmark, tirado do convite */
+    --pink-deep:#C4105E;  /* rosa com contraste pra texto e link */
+    --pink-soft:#FBD4E4;
+    --ink:#3A3739;
+    --ink-soft:#6E686C;
+    --line:#EADDE6;
+    --plum:#4A2233;       /* o véu por cima da foto da duna */
+    --display:"Quicksand", "Century Gothic", sans-serif;
+    --corpo:"Open Sans", -apple-system, "Segoe UI", sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
-  body{font-family:var(--corpo);color:var(--tinta);background:var(--espuma);line-height:1.55;font-size:1.0625rem;overflow-x:hidden}
-  img,svg{max-width:100%}
-  a{color:var(--mar)}
-  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(--sol);outline-offset:3px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{font-family:var(--corpo);color:var(--ink);background:var(--paper);line-height:1.65;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  svg{max-width:100%}
+  a{color:var(--pink-deep)}
+  :focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
 
-  .wrap{width:100%;max-width:40rem;margin:0 auto;padding:0 1.15rem}
-  @media (min-width:900px){.wrap{max-width:66rem;padding:0 2rem}}
+  .wrap{width:100%;max-width:44rem;margin:0 auto;padding:0 1.25rem;position:relative;z-index:2}
+  @media (min-width:900px){.wrap{max-width:56rem}}
+  section{padding:3.25rem 0;position:relative}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,5vw,1.85rem);letter-spacing:.02em;color:var(--ink);margin:.45rem 0 .5rem}
+  .kicker{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pink-deep);display:block}
+  .sub{color:var(--ink-soft);max-width:38rem;margin-bottom:1.75rem}
+  .display{font-family:var(--display);font-weight:700;letter-spacing:.02em}
 
-  .display{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 112;text-transform:uppercase;line-height:.96;letter-spacing:.005em}
-  .kicker{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mar);display:block;margin-bottom:.6rem}
-  h2{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 110;text-transform:uppercase;font-size:clamp(1.55rem,6.4vw,2.5rem);line-height:1;letter-spacing:.004em;margin-bottom:.7rem}
-  .sub{color:var(--tinta-suave);max-width:44ch;margin-bottom:1.6rem}
-  section{padding:3.2rem 0}
-  @media (min-width:900px){section{padding:4.5rem 0}}
+  .btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:.04em;
+       background:var(--pink);color:#fff;border-radius:999px;padding:.9rem 2rem;text-decoration:none;
+       box-shadow:0 2px 0 rgba(196,16,94,.25)}
+  .btn:hover{filter:brightness(1.05)}
+  .btn-note{font-size:.86rem;color:var(--ink-soft)}
 
-  .btn{display:inline-block;background:var(--sol);color:#fff;font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;text-transform:uppercase;font-size:1.1rem;letter-spacing:.02em;padding:.95rem 1.7rem;border-radius:2px;text-decoration:none;box-shadow:0 3px 0 rgba(0,0,0,.22)}
-  .btn:hover{filter:brightness(1.06)}
-  .btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.22)}
-  .btn-note{font-size:.9rem;color:var(--tinta-suave)}
+  /* ---------- as flores de cerejeira do convite ---------- */
+  .blossom{position:absolute;pointer-events:none;user-select:none;z-index:0}
+  .blossom.tl{top:0;left:0;width:clamp(78px,13vw,200px)}
+  .blossom.tr{top:0;right:0;width:clamp(74px,12.5vw,190px)}
+  .blossom.bl{bottom:0;left:0;width:clamp(115px,27vw,265px)}
+  .blossom.br{bottom:0;right:0;width:clamp(120px,29vw,285px)}
+
+  /* ---------- topo ---------- */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);
+          border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.55rem;padding-bottom:.55rem}
+  .topbar img{width:clamp(105px,26vw,150px)}
+  .topbar .tag{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+               color:var(--pink-deep);background:var(--blush);border-radius:999px;padding:.35rem .8rem;flex:0 0 auto;white-space:nowrap}
 
   /* ---------------- HERO ---------------- */
-  /* foto real da duna holandesa ao pôr do sol, com um véu do mar por cima pra letra continuar legível */
-  .hero{background:var(--fundo);color:var(--areia);padding:2.4rem 0 7.5rem;position:relative;isolation:isolate}
+  /* a foto real da duna holandesa ao pôr do sol continua aqui, com um véu
+     cor de ameixa por cima pra letra ficar legível e pra foto conversar
+     com o rosa do convite em vez de brigar com ele */
+  /* o padding do topo acompanha a altura das flores (largura x 1,41), senão em
+     tela de celular a linha "camping crew" nasce debaixo da flor do canto */
+  .hero{position:relative;isolation:isolate;color:#fff;padding:clamp(7.25rem,20vw,11rem) 0 4rem;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:0;z-index:-2;
     background-image:url("praia.webp");background-size:cover;background-position:center 62%}
   .hero::after{content:"";position:absolute;inset:0;z-index:-1;
-    background:linear-gradient(180deg,
-      rgba(12,59,66,.88) 0%,
-      rgba(12,59,66,.84) 46%,
-      rgba(12,59,66,.76) 70%,
-      rgba(12,59,66,.38) 88%,
-      rgba(12,59,66,.10) 100%)}
+    background:
+      linear-gradient(180deg,rgba(255,255,255,0) 78%,rgba(245,231,240,.55) 92%,#F5E7F0 100%),
+      linear-gradient(180deg,
+        rgba(74,34,51,.86) 0%,
+        rgba(74,34,51,.78) 45%,
+        rgba(74,34,51,.60) 72%,
+        rgba(74,34,51,.32) 90%,
+        rgba(74,34,51,.12) 100%)}
   @media (min-width:900px){.hero::before{background-position:center 58%}}
-  .hero .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--areia-molhada);text-shadow:0 1px 10px rgba(12,59,66,.7)}
-  .hero h1{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;text-transform:uppercase;
-    font-size:clamp(2rem,8.6vw,3.9rem);line-height:.95;letter-spacing:-.005em;color:#fff;margin:.9rem 0 1rem;max-width:17ch;
-    text-shadow:0 2px 18px rgba(12,59,66,.5)}
-  .hero h1 em{font-style:normal;color:var(--sol)}
-  .hero .lede{max-width:46ch;color:var(--areia);font-size:1.06rem;text-shadow:0 1px 12px rgba(12,59,66,.75)}
-  .ticket{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:.55rem;margin:1.5rem 0 .35rem;
-    background:var(--sol);color:#fff;padding:.7rem 1.15rem;font-family:var(--display);font-weight:800;
-    font-variation-settings:"wdth" 106;text-transform:uppercase;font-size:clamp(1rem,4.4vw,1.35rem);letter-spacing:.01em}
-  .ticket span{font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
-  .hero-cta{margin:1.6rem 0 .4rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
-  .hero-cta .btn-note{color:#DCEBE8;text-shadow:0 1px 10px rgba(12,59,66,.8)}
-  @media (min-width:900px){.hero{padding:3.6rem 0 9rem}}
+  /* Os PNGs das flores foram recortados do convite e carregam um fundo quase
+     branco OPACO em volta dos galhos. Em página branca isso é invisível, é branco
+     sobre branco. Em cima da foto escura aparece como um retângulo claro. A máscara
+     radial dissolve o sprite a partir do canto antes de chegar na borda reta, então
+     as flores entram na foto como uma bruma em vez de uma caixa.
+     Só no hero: no rodapé o fundo é branco e não precisa. */
+  .hero .blossom{opacity:.92}
+  .hero .blossom.tl{-webkit-mask-image:radial-gradient(125% 125% at 0% 0%,#000 42%,rgba(0,0,0,.35) 62%,transparent 76%);
+                            mask-image:radial-gradient(125% 125% at 0% 0%,#000 42%,rgba(0,0,0,.35) 62%,transparent 76%)}
+  .hero .blossom.tr{-webkit-mask-image:radial-gradient(125% 125% at 100% 0%,#000 42%,rgba(0,0,0,.35) 62%,transparent 76%);
+                            mask-image:radial-gradient(125% 125% at 100% 0%,#000 42%,rgba(0,0,0,.35) 62%,transparent 76%)}
+  .hero .eyebrow{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+                 color:var(--pink-soft);text-shadow:0 1px 12px rgba(74,34,51,.8)}
+  .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,6.2vw,2.35rem);line-height:1.28;letter-spacing:.02em;
+           color:#fff;margin:.8rem 0 .9rem;max-width:20ch;text-shadow:0 2px 20px rgba(74,34,51,.6)}
+  .hero h1 em{font-style:normal;color:var(--pink-soft)}
+  .hero .lede{max-width:38rem;color:#F7EAF1;text-shadow:0 1px 14px rgba(74,34,51,.75)}
+  .ticket{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:.5rem;margin:1.4rem 0 .3rem;
+    background:var(--pink);color:#fff;padding:.55rem 1.15rem;border-radius:999px;
+    font-family:var(--display);font-weight:700;font-size:clamp(.95rem,3.8vw,1.1rem);letter-spacing:.02em;
+    box-shadow:0 2px 0 rgba(196,16,94,.3)}
+  .ticket span{font-weight:500;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;opacity:.92}
+  .hero-cta{margin:1.5rem 0 .4rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+  .hero-cta .btn-note{color:#F2DFE9;text-shadow:0 1px 12px rgba(74,34,51,.85)}
+  .hero-cta .btn-note b{color:#fff}
 
   /* ---------------- quem organiza ---------------- */
-  .helena{background:var(--areia);padding:2rem 0}
-  .helena-card{display:flex;gap:1rem;align-items:flex-start}
-  .helena-av{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--sol);color:#fff;
-    display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.35rem}
-  .helena p{font-size:.99rem;max-width:58ch}
-  .helena b{color:var(--fundo)}
+  .helena{background:var(--blush);padding:2.75rem 0}
+  .helena-card{background:var(--paper);border:1.5px solid var(--pink-soft);border-radius:20px;padding:1.4rem 1.25rem;
+               display:flex;gap:1rem;align-items:flex-start}
+  @media (min-width:640px){.helena-card{padding:1.9rem 1.8rem;gap:1.2rem}}
+  .helena-av{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--blush);color:var(--pink-deep);
+    display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:1.35rem}
+  .helena p{color:var(--ink-soft)}
+  .helena b{color:var(--ink);font-weight:600}
 
   /* ---------------- rota ---------------- */
   .rota{list-style:none;margin:1.5rem 0 0;padding:0}
-  .rota li{position:relative;padding:0 0 1.9rem 3.3rem}
-  .rota li::before{content:"";position:absolute;left:.72rem;top:.5rem;bottom:-.5rem;width:7px;background:var(--mar);border-radius:4px}
+  .rota li{position:relative;padding:0 0 1.9rem 3.4rem}
+  .rota li::before{content:"";position:absolute;left:.72rem;top:.55rem;bottom:-.55rem;width:7px;background:var(--pink-soft);border-radius:4px}
   .rota li:last-child{padding-bottom:0}
   .rota li:last-child::before{display:none}
-  .rota li::after{content:"";position:absolute;left:.3rem;top:.25rem;width:1.35rem;height:1.35rem;border-radius:50%;
-    background:var(--espuma);border:6px solid var(--mar)}
-  .rota li.areia::before{background:repeating-linear-gradient(180deg,var(--sol) 0 12px,var(--areia-molhada) 12px 24px)}
-  .rota li.chegada::after{background:var(--sol);border-color:var(--areia-molhada)}
-  .rota .lugar{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 106;text-transform:uppercase;
-    font-size:1.12rem;line-height:1.05;color:var(--fundo);display:block}
-  .rota .meta{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mar);display:block;margin-top:.2rem}
-  .rota .nota{display:block;font-size:.96rem;color:var(--tinta-suave);margin-top:.25rem}
+  .rota li::after{content:"";position:absolute;left:.3rem;top:.28rem;width:1.35rem;height:1.35rem;border-radius:50%;
+    background:var(--paper);border:6px solid var(--pink-soft)}
+  .rota li.areia::before{background:repeating-linear-gradient(180deg,var(--pink) 0 12px,var(--pink-soft) 12px 24px)}
+  .rota li.chegada::after{background:var(--pink);border-color:var(--blush-deep)}
+  .rota .lugar{font-family:var(--display);font-weight:700;font-size:1.1rem;line-height:1.25;color:var(--ink);display:block}
+  .rota .meta{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+              color:var(--pink-deep);display:block;margin-top:.2rem}
+  .rota .nota{display:block;font-size:.92rem;color:var(--ink-soft);margin-top:.3rem}
   .rota-grid{display:grid;gap:1.5rem}
-  @media (min-width:900px){.rota-grid{grid-template-columns:1fr 20rem;gap:3rem;align-items:start}}
-  .mapinha{background:var(--areia);border-radius:4px;padding:1.2rem}
-  .mapinha figcaption{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mar);margin-top:.6rem}
-  .aviso{margin-top:1.6rem;background:var(--areia);border-left:5px solid var(--mar);padding:1rem 1.1rem;font-size:.96rem}
-  .aviso b{color:var(--fundo)}
+  @media (min-width:900px){.rota-grid{grid-template-columns:1fr 18rem;gap:2.5rem;align-items:start}}
+  .mapinha{background:var(--blush);border-radius:20px;padding:1.35rem}
+  .mapinha figcaption{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+                      color:var(--pink-deep);margin-top:.7rem;text-align:center}
+  .aviso{margin-top:1.75rem;background:var(--blush);border-radius:16px;padding:1.1rem 1.2rem;font-size:.93rem;color:var(--ink-soft)}
+  .aviso b{color:var(--ink);font-weight:600}
 
   /* ---------------- ninguém dirige ---------------- */
-  .hop{background:var(--fundo);color:var(--areia)}
-  .hop h2{color:#fff}
-  .hop .kicker{color:var(--sol)}
-  .hop .sub{color:#BCD3D2;max-width:52ch}
-  .hop-cards{display:grid;gap:1rem;margin-top:.5rem}
+  .hop{background:var(--blush);overflow:hidden}
+  .hop-cards{display:grid;gap:.9rem;margin-top:.5rem}
   @media (min-width:760px){.hop-cards{grid-template-columns:1fr 1fr}}
-  .hop-card{background:var(--espuma);color:var(--tinta);padding:1.4rem 1.3rem;border-radius:4px;position:relative}
-  .hop-card .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
-    display:inline-block;padding:.28rem .55rem;background:var(--areia-molhada);color:var(--fundo);margin-bottom:.85rem}
-  .hop-card.principal .tag{background:var(--sol);color:#fff}
-  .hop-card h3{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;text-transform:uppercase;
-    font-size:1.3rem;line-height:1;margin-bottom:.15rem}
-  .hop-preco{font-family:var(--display);font-weight:800;font-size:2.1rem;line-height:1.05;color:var(--mar);margin:.45rem 0 .1rem}
-  .hop-card .por{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-suave)}
-  .hop-card p{font-size:.96rem;margin-top:.8rem}
-  .hop-fonte{margin-top:1.2rem;font-family:var(--mono);font-size:.76rem;letter-spacing:.03em;color:#9FBDBB}
-  .hop-fonte a{color:#BCD3D2}
+  .hop-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1.35rem 1.3rem;position:relative}
+  .hop-card.principal{border:1.5px solid var(--pink-soft)}
+  .hop-card .tag{font-family:var(--display);font-weight:700;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;
+    display:inline-block;padding:.22rem .6rem;border-radius:999px;background:var(--blush-deep);color:var(--pink-deep);margin-bottom:.85rem}
+  .hop-card.principal .tag{background:var(--pink);color:#fff}
+  .hop-card h3{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.25;margin-bottom:.15rem;color:var(--ink)}
+  .hop-preco{font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:1.15;color:var(--pink-deep);margin:.45rem 0 .1rem}
+  .hop-card .por{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+  .hop-card p{font-size:.93rem;margin-top:.8rem;color:var(--ink-soft)}
+  .hop-fonte{margin-top:1.3rem;font-size:.84rem;color:var(--ink-soft)}
 
-  /* ---------------- OS 3 DIAS (assinatura) ---------------- */
-  .dias{background:var(--areia);overflow:hidden}
-  .fita{display:grid;gap:0;margin-top:1.6rem;border-radius:4px;overflow:hidden}
-  @media (min-width:860px){.fita{grid-template-columns:1fr 1.25fr 1fr}}
-  .dia{background:var(--espuma);padding:1.5rem 1.3rem;position:relative}
-  .dia + .dia{border-top:3px solid var(--areia-molhada)}
-  @media (min-width:860px){.dia + .dia{border-top:none;border-left:3px solid var(--areia-molhada)}}
-  .dia .data{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 115;text-transform:uppercase;
-    font-size:clamp(1.9rem,7.6vw,2.6rem);line-height:.92;color:var(--fundo)}
-  .dia .titulo{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mar);margin-top:.35rem}
+  /* ---------------- OS 3 DIAS ---------------- */
+  .dias{overflow:hidden}
+  .fita{display:grid;gap:.7rem;margin-top:1.6rem}
+  @media (min-width:860px){.fita{grid-template-columns:1fr 1.2fr 1fr;gap:.8rem}}
+  .dia{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1.4rem 1.3rem;position:relative}
+  .dia .data{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,6vw,1.9rem);line-height:1.15;color:var(--ink)}
+  .dia .titulo{font-family:var(--display);font-weight:600;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);margin-top:.35rem}
   .dia ul{list-style:none;margin-top:1.05rem;display:grid;gap:.55rem}
-  .dia li{position:relative;padding-left:1.35rem;font-size:.97rem}
-  .dia li::before{content:"";position:absolute;left:0;top:.55rem;width:.5rem;height:.5rem;background:var(--sol)}
-  .dia li b{font-family:var(--mono);font-weight:500;font-size:.88rem;color:var(--fundo)}
-  /* o dia do casamento: a fita mergulha no mar */
-  .dia.casamento{background:var(--fundo);color:var(--areia);border-color:var(--fundo)}
+  .dia li{position:relative;padding-left:1.15rem;font-size:.94rem;color:var(--ink-soft)}
+  .dia li::before{content:"";position:absolute;left:0;top:.6rem;width:.4rem;height:.4rem;border-radius:50%;background:var(--pink)}
+  .dia li b{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--ink)}
+  /* o dia do casamento: o painel do meio vira o rosa do convite */
+  .dia.casamento{background:var(--pink-deep);border-color:var(--pink-deep);color:#fff}
   .dia.casamento .data{color:#fff}
-  .dia.casamento .titulo{color:var(--sol)}
+  .dia.casamento .titulo{color:var(--pink-soft)}
+  .dia.casamento li{color:#FAE7F0}
+  .dia.casamento li::before{background:var(--pink-soft)}
   .dia.casamento li b{color:#fff}
-  .por-do-sol{margin-top:1.2rem;display:flex;align-items:center;gap:.8rem;border-top:1px solid rgba(244,231,207,.28);padding-top:.9rem}
+  .por-do-sol{margin-top:1.2rem;display:flex;align-items:center;gap:.8rem;border-top:1px solid rgba(255,255,255,.28);padding-top:.9rem}
   .por-do-sol svg{flex:0 0 auto}
-  .por-do-sol div{font-size:.9rem;color:#BCD3D2}
-  .por-do-sol b{display:block;font-family:var(--display);font-weight:800;font-size:1.25rem;color:#fff;line-height:1}
-  .fita-legenda{display:grid;gap:.2rem;margin-top:.8rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--tinta-suave)}
-  @media (min-width:860px){.fita-legenda{grid-template-columns:1fr 1.25fr 1fr;text-align:center}}
+  .por-do-sol div{font-size:.88rem;color:#FAE7F0}
+  .por-do-sol b{display:block;font-family:var(--display);font-weight:700;font-size:1.2rem;color:#fff;line-height:1.2}
+  .fita-legenda{display:grid;gap:.2rem;margin-top:.9rem;font-family:var(--display);font-weight:600;font-size:.66rem;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink-soft)}
+  @media (min-width:860px){.fita-legenda{grid-template-columns:1fr 1.2fr 1fr;gap:.8rem;text-align:center}}
 
   /* ---------------- vilinha ---------------- */
-  .pitches{display:grid;gap:.75rem;margin-top:1.5rem}
+  .vilinha{background:var(--blush);overflow:hidden}
+  .pitches{display:grid;gap:.7rem;margin-top:1.5rem}
   @media (min-width:560px){.pitches{grid-template-columns:1fr 1fr}}
   @media (min-width:900px){.pitches{grid-template-columns:repeat(4,1fr)}}
-  .pitch{background:#fff;border:2px dashed var(--mar);border-radius:4px;padding:.9rem .95rem}
-  .pitch .n{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mar)}
-  .pitch svg{display:block;margin:.5rem 0 .35rem}
-  .pitch .m2{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--fundo);line-height:1}
-  .pitch .quem{font-size:.9rem;color:var(--tinta-suave)}
-  .pitch.mais{border-color:var(--sol);display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:6.3rem}
-  .pitch.mais .n{color:var(--sol)}
-  .pitch.mais .mais-txt{font-family:var(--display);font-weight:800;text-transform:uppercase;color:var(--sol);font-size:1.05rem;line-height:1.05;margin-top:.4rem}
-  .banheiro{margin-top:1.1rem;background:var(--mar);color:#fff;padding:1.15rem 1.2rem;border-radius:4px;display:flex;gap:1rem;align-items:flex-start}
-  .banheiro .emoji{font-size:1.8rem;line-height:1}
-  .banheiro h3{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;text-transform:uppercase;font-size:1.2rem;line-height:1;margin-bottom:.35rem}
-  .banheiro p{font-size:.96rem;color:#DCEBE8}
+  .pitch{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:.95rem 1rem}
+  .pitch .n{font-family:var(--display);font-weight:600;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep)}
+  .pitch svg{display:block;margin:.5rem 0 .45rem}
+  .pitch .m2{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--ink);line-height:1.2}
+  .pitch .quem{font-size:.88rem;color:var(--ink-soft)}
+  .pitch.mais{border:1.5px dashed var(--pink-soft);display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:6.3rem}
+  .pitch.mais .mais-txt{font-family:var(--display);font-weight:700;color:var(--pink-deep);font-size:1rem;line-height:1.25;margin-top:.4rem}
+  .banheiro{margin-top:1.1rem;background:var(--paper);border:1.5px solid var(--pink-soft);border-radius:20px;
+            padding:1.2rem 1.25rem;display:flex;gap:1rem;align-items:flex-start}
+  .banheiro .emoji{font-size:1.7rem;line-height:1.2}
+  .banheiro h3{font-family:var(--display);font-weight:700;font-size:1.08rem;line-height:1.3;margin-bottom:.3rem;color:var(--ink)}
+  .banheiro p{font-size:.93rem;color:var(--ink-soft)}
   .fatos{display:grid;gap:.6rem;margin-top:1.1rem}
   @media (min-width:640px){.fatos{grid-template-columns:1fr 1fr 1fr}}
-  .fato{background:var(--areia);padding:.85rem 1rem;font-size:.93rem;border-radius:4px}
-  .fato b{display:block;font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--fundo);margin-bottom:.1rem}
-  .regras{margin-top:1.1rem;font-size:.94rem;color:var(--tinta-suave)}
-  .regras b{color:var(--fundo)}
+  .fato{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:.95rem 1.05rem;font-size:.9rem;color:var(--ink-soft)}
+  .fato b{display:block;font-family:var(--display);font-weight:700;font-size:1.02rem;color:var(--ink);margin-bottom:.2rem}
+  .regras{margin-top:1.2rem;font-size:.92rem;color:var(--ink-soft)}
+  .regras b{color:var(--ink);font-weight:600}
 
   /* ---------------- custo ---------------- */
-  .custo{background:var(--fundo);color:var(--areia)}
-  .custo h2{color:#fff}
-  .custo .kicker{color:var(--sol)}
-  .custo .sub{color:#BCD3D2}
   .cards{display:grid;gap:.7rem}
   @media (min-width:560px){.cards{grid-template-columns:1fr 1fr}}
   @media (min-width:900px){.cards{grid-template-columns:repeat(4,1fr)}}
-  .card{background:var(--espuma);color:var(--tinta);padding:1.15rem 1.05rem;border-radius:4px;position:relative}
-  .card .valor{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 104;font-size:clamp(1.7rem,7vw,2.05rem);
-    line-height:1;color:var(--mar);white-space:nowrap}
-  .card .oque{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:.95rem;margin-top:.4rem;color:var(--fundo)}
-  .card .det{font-size:.88rem;color:var(--tinta-suave);margin-top:.25rem}
-  .est{position:absolute;top:-.5rem;right:-.35rem;background:var(--sol);color:#fff;font-family:var(--mono);
-    font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .45rem}
-  .total{background:var(--sol);color:#fff;margin-top:.7rem;padding:1.4rem 1.3rem;border-radius:4px;
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1.15rem 1.05rem;position:relative}
+  .card .valor{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,6vw,1.8rem);line-height:1.15;color:var(--pink-deep);white-space:nowrap}
+  .card .oque{font-family:var(--display);font-weight:700;font-size:1rem;margin-top:.35rem;color:var(--ink)}
+  .card .det{font-size:.87rem;color:var(--ink-soft);margin-top:.25rem}
+  .est{position:absolute;top:-.55rem;right:.7rem;background:var(--blush-deep);color:var(--pink-deep);
+    font-family:var(--display);font-weight:700;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:.2rem .55rem;border-radius:999px}
+  .total{background:var(--pink-deep);color:#fff;margin-top:.7rem;padding:1.5rem 1.4rem;border-radius:20px;
     display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
-  .total .valor{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 108;font-size:clamp(2.4rem,11vw,3.4rem);line-height:1;color:#fff}
-  .total .oque{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.05rem}
-  .total .det{width:100%;font-size:.95rem;color:#FFE7DF}
-  .como-paga{margin-top:1.2rem;background:rgba(244,231,207,.1);border:1px solid rgba(244,231,207,.25);border-radius:4px;padding:1.2rem;font-size:.97rem;color:#DCEBE8}
-  .como-paga b{color:#fff}
-  .como-paga ul{list-style:none;margin-top:.7rem;display:grid;gap:.5rem}
+  .total .valor{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,9vw,2.9rem);line-height:1.1;color:#fff}
+  .total .oque{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--pink-soft)}
+  .total .det{width:100%;font-size:.92rem;color:#FAE7F0}
+  .como-paga{margin-top:1.2rem;background:var(--blush);border-radius:20px;padding:1.3rem 1.25rem;font-size:.94rem;color:var(--ink-soft)}
+  .como-paga b{color:var(--ink);font-weight:600}
+  .como-paga ul{list-style:none;margin-top:.75rem;display:grid;gap:.5rem}
   .como-paga li{padding-left:1.4rem;position:relative}
-  .como-paga li::before{content:"→";position:absolute;left:0;color:var(--sol);font-weight:700}
+  .como-paga li::before{content:"→";position:absolute;left:0;color:var(--pink);font-weight:700}
 
   /* ---------------- participar ---------------- */
-  .passos{list-style:none;counter-reset:p;display:grid;gap:.65rem;margin-top:1.4rem}
+  .passos{list-style:none;counter-reset:p;display:grid;gap:.7rem;margin-top:1.4rem}
   @media (min-width:760px){.passos{grid-template-columns:1fr 1fr}}
-  .passos li{counter-increment:p;background:#fff;border:1px solid var(--borda);border-radius:4px;padding:.95rem 1rem .95rem 3.4rem;position:relative}
-  .passos li::before{content:counter(p);position:absolute;left:.9rem;top:.9rem;width:1.7rem;height:1.7rem;
-    background:var(--sol);color:#fff;font-family:var(--display);font-weight:800;font-size:1rem;display:grid;place-items:center}
-  .passos b{display:block;color:var(--fundo)}
-  .passos span{font-size:.94rem;color:var(--tinta-suave)}
-  .prazo{margin-top:1.2rem;background:var(--sol);color:#fff;padding:1.2rem 1.3rem;border-radius:4px}
-  .prazo .display{font-size:clamp(1.35rem,5.6vw,1.9rem)}
-  .prazo p{font-size:.95rem;color:#FFE7DF;margin-top:.3rem}
-  .cta-linha{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+  .passos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:18px;
+             padding:1.05rem 1.1rem 1.05rem 3.6rem;position:relative}
+  .passos li::before{content:counter(p);position:absolute;left:1rem;top:1.05rem;width:1.75rem;height:1.75rem;border-radius:50%;
+    background:var(--blush);color:var(--pink-deep);font-family:var(--display);font-weight:700;font-size:.95rem;display:grid;place-items:center}
+  .passos b{display:block;font-family:var(--display);font-weight:700;color:var(--ink)}
+  .passos span{font-size:.92rem;color:var(--ink-soft)}
+  .prazo{margin-top:1.3rem;background:var(--pink-deep);color:#fff;padding:1.3rem 1.4rem;border-radius:20px}
+  .prazo .display{font-size:clamp(1.2rem,5vw,1.6rem);line-height:1.3}
+  .prazo p{font-size:.93rem;color:#FAE7F0;margin-top:.35rem}
+  .cta-linha{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
 
   /* ---------------- crew wall ---------------- */
-  .crew{background:var(--areia)}
+  .crew{background:var(--blush);overflow:hidden}
   .parede{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
-  .chip{background:#fff;border:1px solid var(--borda);border-radius:2px;padding:.6rem .85rem;min-width:0;max-width:100%}
-  .chip .nome{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 106;text-transform:uppercase;
-    font-size:1.02rem;line-height:1;color:var(--fundo);display:block}
-  .chip .badges{font-size:.82rem;color:var(--tinta-suave);margin-top:.25rem;display:block;line-height:1.35;overflow-wrap:anywhere}
-  .chip.vazio{background:transparent;border:2px dashed var(--sol);display:grid;place-items:center;color:var(--sol);
-    font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:.75rem .95rem}
-  .legenda{margin-top:1.1rem;font-size:.9rem;color:var(--tinta-suave)}
-  .legenda code{font-family:var(--mono);font-size:.85rem}
-  .contador{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mar);margin-top:.9rem}
+  /* NÃO renomear .chip nem .chip.vazio nem .contador: o comando /crew-wall
+     regenera este bloco e conta com estas classes exatas. */
+  .chip{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.65rem .9rem;min-width:0;max-width:100%}
+  .chip .nome{font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.25;color:var(--ink);display:block}
+  .chip .badges{font-size:.8rem;color:var(--ink-soft);margin-top:.25rem;display:block;line-height:1.4;overflow-wrap:anywhere}
+  .chip.vazio{background:transparent;border:1.5px dashed var(--pink-soft);display:grid;place-items:center;color:var(--pink-deep);
+    font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.75rem .95rem}
+  .legenda{margin-top:1.2rem;font-size:.88rem;color:var(--ink-soft)}
+  .legenda code{font-family:var(--display);font-weight:600;font-size:.85rem;color:var(--pink-deep)}
+  .contador{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);margin-top:1rem}
 
   /* ---------------- FAQ ---------------- */
-  @media (min-width:900px){.faq-grid{columns:2;column-gap:1.1rem} .faq-grid details{break-inside:avoid}}
-  details{background:#fff;border:1px solid var(--borda);border-radius:4px;margin-top:.6rem;overflow:hidden}
-  summary{cursor:pointer;font-weight:700;padding:.95rem 1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;color:var(--fundo)}
+  @media (min-width:900px){.faq-grid{columns:2;column-gap:.9rem}.faq-grid details{break-inside:avoid}}
+  details{border:1px solid var(--line);border-radius:14px;margin-bottom:.6rem;background:var(--paper);overflow:hidden}
+  summary{font-family:var(--display);font-weight:600;font-size:1rem;padding:.95rem 1.1rem;cursor:pointer;
+          list-style:none;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;color:var(--ink)}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";font-family:var(--mono);color:var(--sol);font-weight:700;font-size:1.2rem;flex-shrink:0;line-height:1.3}
-  details[open] summary::after{content:"-"}
-  .resposta{padding:0 1rem 1rem;font-size:.97rem;color:#2E4649}
-  .resposta p + p{margin-top:.55rem}
+  summary::after{content:"▾";color:var(--pink);font-weight:700;font-size:1.2rem;flex:0 0 auto;line-height:1.4}
+  details[open] summary::after{content:"▴"}
+  details[open] summary{border-bottom:1px solid var(--line)}
+  .resposta{padding:1rem 1.1rem;font-size:.94rem;color:var(--ink-soft)}
+  .resposta p+p{margin-top:.7rem}
+  .resposta b{color:var(--ink);font-weight:600}
 
   /* ---------------- footer ---------------- */
-  footer{background:var(--fundo);color:var(--areia);padding:3rem 0 3.4rem}
-  footer h2{color:#fff}
-  footer .kicker{color:var(--sol)}
-  .fone{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 106;font-size:clamp(1.5rem,7vw,2.1rem);
-    color:var(--sol);text-decoration:none;display:inline-block;margin:.5rem 0 .2rem}
-  footer p{max-width:52ch;color:#BCD3D2}
-  .rodape{margin-top:2rem;font-size:.82rem;color:#8FB0AE;max-width:56ch}
+  footer{text-align:center;padding:3.25rem 0 4rem;overflow:hidden;position:relative}
+  .contact-card{background:var(--blush);border-radius:20px;padding:1.75rem 1.35rem}
+  @media (min-width:640px){.contact-card{padding:2.1rem 2rem}}
+  .contact-card p{color:var(--ink-soft);max-width:34rem;margin-left:auto;margin-right:auto}
+  .fone{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,6vw,1.7rem);color:var(--pink-deep);
+        text-decoration:none;display:inline-block;margin:.5rem 0 .9rem}
+  .fone:hover{text-decoration:underline}
+  .foot-mark{width:min(60vw,17rem);margin:2.75rem auto 1rem}
+  .foot-d{font-family:var(--display);font-weight:500;font-size:.78rem;letter-spacing:.28em;color:var(--ink-soft)}
+  .rodape{font-size:.8rem;color:var(--ink-soft);max-width:36rem;margin:1.5rem auto 0}
 </style>
 </head>
 <body>
 
-<header class="hero">
+<!-- ============ TOPO ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <a href="#topo" aria-label="Maeli &amp; Marieke"><img src="assets/wordmark.png" alt="Maeli e Marieke"></a>
+    <span class="tag">⛺ Camping</span>
+  </div>
+</header>
+
+<header class="hero" id="topo">
+  <img class="blossom tl" src="assets/blossom-tl.png" alt="" aria-hidden="true">
+  <img class="blossom tr" src="assets/blossom-tr.png" alt="" aria-hidden="true">
   <div class="wrap">
     <p class="eyebrow">Camping crew · 26-28 de agosto</p>
     <h1>Bora acampar <em>na praia</em> pro casamento da Maeli e da Marieke?</h1>
     <p class="lede">Quinta, <b>27 de agosto</b>, Restaurant de Stern, na praia de Callantsoog, a 1h15 de Amsterdam. A gente chega na quarta, monta as barracas juntos a 2,5 km da festa, e sai na sexta com pé na areia. 🏖</p>
-    <p class="ticket display">Qua 26 → Sex 28 de agosto <span>2 noites</span></p>
+    <p class="ticket">Qua 26 → Sex 28 de agosto <span>2 noites</span></p>
     <div class="hero-cta">
       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a>
       <span class="btn-note">Leva 2 minutos · o grupo fecha <b>dom 26/7</b></span>
@@ -322,15 +373,15 @@
         </div>
         <figure class="mapinha">
           <svg viewBox="0 0 200 190" role="img" aria-label="Mapa esquemático da costa de Noord-Holland com Callantsoog ao norte e Amsterdam ao sul">
-            <path d="M118 8 C96 34 74 58 66 90 C58 122 68 150 86 174" fill="none" stroke="#175E66" stroke-width="5" stroke-linecap="round" opacity=".35"/>
-            <path d="M118 8 C96 34 74 58 66 90" fill="none" stroke="#FF6B4A" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="67" cy="86" r="9" fill="#FF6B4A"/>
-            <text x="84" y="82" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#0C3B42">CALLANTSOOG</text>
-            <text x="84" y="97" font-family="DM Mono, monospace" font-size="10" fill="#4A6265">o casamento ⛺</text>
-            <circle cx="88" cy="170" r="7" fill="#0C3B42"/>
-            <text x="102" y="168" font-family="Archivo, sans-serif" font-weight="800" font-size="13" fill="#0C3B42">AMSTERDAM</text>
-            <text x="102" y="182" font-family="DM Mono, monospace" font-size="10" fill="#4A6265">75 km</text>
-            <text x="8" y="40" font-family="DM Mono, monospace" font-size="11" fill="#175E66" opacity=".7">mar do norte</text>
+            <path d="M118 8 C96 34 74 58 66 90 C58 122 68 150 86 174" fill="none" stroke="#C4105E" stroke-width="5" stroke-linecap="round" opacity=".25"/>
+            <path d="M118 8 C96 34 74 58 66 90" fill="none" stroke="#F81878" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="67" cy="86" r="9" fill="#F81878"/>
+            <text x="84" y="82" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#3A3739">CALLANTSOOG</text>
+            <text x="84" y="97" font-family="Quicksand, sans-serif" font-weight="500" font-size="10" fill="#6E686C">o casamento ⛺</text>
+            <circle cx="88" cy="170" r="7" fill="#C4105E"/>
+            <text x="102" y="168" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#3A3739">AMSTERDAM</text>
+            <text x="102" y="182" font-family="Quicksand, sans-serif" font-weight="500" font-size="10" fill="#6E686C">75 km</text>
+            <text x="8" y="40" font-family="Quicksand, sans-serif" font-weight="500" font-size="11" fill="#C4105E" opacity=".6">mar do norte</text>
           </svg>
           <figcaption>Costa de Noord-Holland</figcaption>
         </figure>
@@ -392,9 +443,9 @@
           </ul>
           <div class="por-do-sol">
             <svg width="46" height="30" viewBox="0 0 46 30" aria-hidden="true">
-              <circle cx="23" cy="17" r="11" fill="#FF6B4A"/>
-              <rect x="4" y="17" width="38" height="13" fill="#0C3B42"/>
-              <line x1="2" y1="17.5" x2="44" y2="17.5" stroke="#F4E7CF" stroke-width="2"/>
+              <circle cx="23" cy="17" r="11" fill="#FBD4E4"/>
+              <rect x="4" y="17" width="38" height="13" fill="#9E0C4A"/>
+              <line x1="2" y1="17.5" x2="44" y2="17.5" stroke="#FBD4E4" stroke-width="2"/>
             </svg>
             <div>Pôr do sol na quinta<b>20h44</b></div>
           </div>
@@ -418,7 +469,7 @@
     </div>
   </section>
 
-  <section id="vilinha">
+  <section class="vilinha" id="vilinha">
     <div class="wrap">
       <span class="kicker">Onde a gente fica</span>
       <h2>Nossa vilinha de barracas, lado a lado</h2>
@@ -427,10 +478,10 @@
         <div class="pitch">
           <span class="n">pitch 1</span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
-            <path d="M8,46 L38,10 L68,46 Z" fill="#175E66"/><path d="M31,46 L38,24 L45,46 Z" fill="#F4E7CF"/>
-            <path d="M78,46 L96,24 L114,46 Z" fill="#FF6B4A"/>
-            <rect x="120" y="32" width="26" height="10" rx="3" fill="#0C3B42"/>
-            <circle cx="126" cy="43" r="3" fill="#1B2B2E"/><circle cx="140" cy="43" r="3" fill="#1B2B2E"/>
+            <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
+            <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
+            <rect x="120" y="32" width="26" height="10" rx="3" fill="#3A3739"/>
+            <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
           <div class="quem">4-5 pessoas</div>
@@ -438,10 +489,10 @@
         <div class="pitch">
           <span class="n">pitch 2</span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
-            <path d="M8,46 L38,10 L68,46 Z" fill="#175E66"/><path d="M31,46 L38,24 L45,46 Z" fill="#F4E7CF"/>
-            <path d="M78,46 L96,24 L114,46 Z" fill="#FF6B4A"/>
-            <rect x="120" y="32" width="26" height="10" rx="3" fill="#0C3B42"/>
-            <circle cx="126" cy="43" r="3" fill="#1B2B2E"/><circle cx="140" cy="43" r="3" fill="#1B2B2E"/>
+            <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
+            <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
+            <rect x="120" y="32" width="26" height="10" rx="3" fill="#3A3739"/>
+            <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
           <div class="quem">4-5 pessoas</div>
@@ -449,10 +500,10 @@
         <div class="pitch">
           <span class="n">pitch 3</span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
-            <path d="M8,46 L38,10 L68,46 Z" fill="#175E66"/><path d="M31,46 L38,24 L45,46 Z" fill="#F4E7CF"/>
-            <path d="M78,46 L96,24 L114,46 Z" fill="#FF6B4A"/>
-            <rect x="120" y="32" width="26" height="10" rx="3" fill="#0C3B42"/>
-            <circle cx="126" cy="43" r="3" fill="#1B2B2E"/><circle cx="140" cy="43" r="3" fill="#1B2B2E"/>
+            <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
+            <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
+            <rect x="120" y="32" width="26" height="10" rx="3" fill="#3A3739"/>
+            <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
           <div class="quem">4-5 pessoas</div>
@@ -513,7 +564,7 @@
         </div>
       </div>
       <div class="total">
-        <span class="valor display">~€65-85</span>
+        <span class="valor">~€65-85</span>
         <span class="oque">por pessoa, os 3 dias</span>
         <span class="det">Depende de quantas pessoas por pitch e por carro. Com os pitches cheios (5) e as caronas cheias fica mais perto de €65.</span>
       </div>
@@ -638,12 +689,19 @@
 </main>
 
 <footer id="contato">
+  <img class="blossom bl" src="assets/blossom-bl.png" alt="" aria-hidden="true">
+  <img class="blossom br" src="assets/blossom-br.png" alt="" aria-hidden="true">
   <div class="wrap">
-    <span class="kicker">Qualquer dúvida</span>
-    <h2>Fala com a Helena</h2>
-    <a class="fone" href="https://wa.me/31686409404">+31 6 8640 9404</a>
-    <p>WhatsApp, de preferência: tô com muita coisa desse casamento na mão e nem sempre consigo atender. Se eu demorar um pouco pra responder, não some: eu chego lá. 💛</p>
-    <p style="margin-top:1.5rem"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a></p>
+    <div class="contact-card">
+      <span class="kicker">Qualquer dúvida</span>
+      <h2>Fala com a Helena</h2>
+      <a class="fone" href="https://wa.me/31686409404">+31 6 8640 9404</a>
+      <p>WhatsApp, de preferência: tô com muita coisa desse casamento na mão e nem sempre consigo atender. Se eu demorar um pouco pra responder, não some: eu chego lá. 💛</p>
+      <p style="margin-top:1.5rem"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a></p>
+    </div>
+
+    <img class="foot-mark" src="assets/wordmark.png" alt="Maeli e Marieke">
+    <div class="foot-d">27 . 08 . 2026</div>
     <p class="rodape">Camping do casamento da Maeli &amp; Marieke · Vakantiepark Callassande, Voorweg 5a, Callantsoog · qua 26 → sex 28 de agosto de 2026. Página feita pela Helena (com o Claudinho 🤖) pra organizar o camping da nossa turma. Preços verificados em 22/07/2026 (Callassande · Harry's Tweewielers · Taxi Callantsoog).</p>
   </div>
 </footer>

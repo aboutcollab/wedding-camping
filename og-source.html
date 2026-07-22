@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!--
+  SOURCE FILE for og.png, o card que o WhatsApp mostra (1200x630).
+  ⚠️ SEGUNDA SUPERFÍCIE DE CÓPIA: as datas e o preço estão assados dentro de um
+     PNG aqui, então NÃO acompanham o index.html. Sempre que mudar data, preço ou
+     prazo na página, edita este arquivo e re-renderiza:
+
+     cd transport/camping-site
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+       --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+       --window-size=1200,630 --screenshot=og.png og-source.html
+
+     Depois sobe o og.png e aumenta o ?v= em og:image e twitter:image no
+     index.html, senão o WhatsApp reusa o preview velho que ele já guardou.
+
+  História: v1 (20 Jul 2026) foi feito sem arquivo-fonte, este aqui é o primeiro
+            source que existe. v2 renderizado 22 Jul 2026, já no sistema visual
+            do convite, igual ao hub e ao card do ônibus.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF; --blush:#F5E7F0; --blush-deep:#F0DAE8;
+    --pink:#F81878; --pink-deep:#C4105E; --pink-soft:#FBD4E4;
+    --ink:#3A3739; --ink-soft:#6E686C;
+    --display:"Quicksand","Century Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{background:var(--paper);font-family:var(--display);color:var(--ink);position:relative}
+  .b{position:absolute;pointer-events:none}
+  .tl{top:-34px;left:-26px;width:268px}
+  .tr{top:-34px;right:-26px;width:258px}
+  .bl{bottom:-30px;left:-26px;width:250px}
+  .br{bottom:-30px;right:-26px;width:262px}
+
+  .c{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;
+     align-items:center;justify-content:center;text-align:center;padding:0 90px}
+  .mark{width:470px;margin:0 auto 4px}
+  .date{font-weight:500;font-size:21px;letter-spacing:.4em;color:var(--ink-soft);margin-bottom:22px}
+  .rule{width:54px;height:1px;background:var(--pink-soft);margin:0 auto 24px}
+  h1{font-weight:600;font-size:52px;letter-spacing:.02em;color:var(--ink);line-height:1.15}
+  .l{margin-top:22px;font-weight:500;font-size:27px;color:var(--ink-soft);line-height:1.5}
+  .l b{font-weight:600;color:var(--ink)}
+  .preco{margin-top:30px;display:inline-block;background:var(--blush);color:var(--pink-deep);
+         font-weight:700;font-size:26px;letter-spacing:.02em;padding:12px 30px;border-radius:999px}
+</style>
+</head>
+<body>
+
+  <img class="b tl" src="assets/blossom-tl.png" alt="">
+  <img class="b tr" src="assets/blossom-tr.png" alt="">
+  <img class="b bl" src="assets/blossom-bl.png" alt="">
+  <img class="b br" src="assets/blossom-br.png" alt="">
+
+  <div class="c">
+    <img class="mark" src="assets/wordmark.png" alt="Maeli e Marieke">
+    <div class="date">27 . 08 . 2026</div>
+    <div class="rule"></div>
+    <h1>⛺ O camping do casamento</h1>
+    <p class="l"><b>Qua 26 → Sex 28 de agosto</b><br>vilinha de barracas a 2,5 km da festa</p>
+    <span class="preco">~€65-85 tudo incluído</span>
+  </div>
+
+</body>
+</html>
