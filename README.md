@@ -9,7 +9,7 @@ Made by Helena (+31 6 8640 9404), a friend of the couple, to organise the campin
 ## Rules for this repo
 
 - **No guest data in this repo, ever.** No phone numbers except Helena's own, no surnames, no email addresses, no contact lists. The crew wall shows **first names only**, and only of people who signed up themselves.
-- **No links to the coach site** (`wedding-bus`). Different audience, deliberately separate. Nothing here points there and nothing there points here.
+- **No links to the other wedding transport page.** Different audience, deliberately separate. Nothing here points there and nothing there points here.
 - Short-lived: this repo gets deleted after the wedding.
 
 ## Files

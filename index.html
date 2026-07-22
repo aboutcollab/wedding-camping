@@ -220,10 +220,10 @@
   /* ---------------- crew wall ---------------- */
   .crew{background:var(--areia)}
   .parede{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
-  .chip{background:#fff;border:1px solid var(--borda);border-radius:2px;padding:.6rem .85rem;min-width:0}
+  .chip{background:#fff;border:1px solid var(--borda);border-radius:2px;padding:.6rem .85rem;min-width:0;max-width:100%}
   .chip .nome{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 106;text-transform:uppercase;
     font-size:1.02rem;line-height:1;color:var(--fundo);display:block}
-  .chip .badges{font-size:.82rem;color:var(--tinta-suave);margin-top:.25rem;display:block;white-space:nowrap}
+  .chip .badges{font-size:.82rem;color:var(--tinta-suave);margin-top:.25rem;display:block;line-height:1.35;overflow-wrap:anywhere}
   .chip.vazio{background:transparent;border:2px dashed var(--sol);display:grid;place-items:center;color:var(--sol);
     font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding:.75rem .95rem}
   .legenda{margin-top:1.1rem;font-size:.9rem;color:var(--tinta-suave)}
