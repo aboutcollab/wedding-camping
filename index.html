@@ -4,20 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Camping do casamento da Maeli e da Marieke · 26-28 ago 2026</title>
-<meta name="description" content="A Maeli e a Marieke vão casar na praia em Callantsoog. A camping crew vai acampar do lado: qua 26 → sex 28 de agosto, vilinha de barracas a 2,5 km da festa. ~€65-85 tudo incluído. Responde até dom 26/7.">
+<meta name="description" content="A Maeli e a Marieke vão casar na praia em Callantsoog. A camping crew vai acampar do lado: qua 26 → sex 28 de agosto, vilinha de barracas a 2,5 km da festa. ~€65-85 tudo incluído. PT · EN · NL">
 
-<!-- share card: o WhatsApp mostra isso antes de qualquer pessoa abrir o link -->
+<!-- share card: o WhatsApp mostra isso antes de qualquer pessoa abrir o link.
+     Fica em português de propósito: o link só vai pra lista pequena de amigos
+     próximos. A página em si é trilíngue desde a primeira pintura. -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aboutcollab.github.io/wedding-camping/">
 <meta property="og:title" content="⛺ Camping do casamento · 26-28 ago 2026">
-<meta property="og:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, vilinha de barracas a 2,5 km da festa. ~€65-85 tudo incluído. Responde até dom 26/7. Helena">
+<meta property="og:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, vilinha de barracas a 2,5 km da festa. ~€65-85 tudo incluído. Helena">
 <meta property="og:image" content="https://aboutcollab.github.io/wedding-camping/og.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Maeli e Marieke, em letra manuscrita rosa, com flores de cerejeira. O camping do casamento, 26 a 28 de agosto de 2026">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="⛺ Camping do casamento · 26-28 ago 2026">
-<meta name="twitter:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, três dias, ~€65-85 tudo incluído. Responde até dom 26/7.">
+<meta name="twitter:description" content="Bora acampar na praia pro casamento da Maeli e da Marieke? Qua 26 → sex 28 de agosto, três dias, ~€65-85 tudo incluído.">
 <meta name="twitter:image" content="https://aboutcollab.github.io/wedding-camping/og.png?v=2">
 <meta name="theme-color" content="#F5E7F0">
 <meta name="robots" content="noindex">
@@ -68,7 +70,7 @@
 
   .btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:.04em;
        background:var(--pink);color:#fff;border-radius:999px;padding:.9rem 2rem;text-decoration:none;
-       box-shadow:0 2px 0 rgba(196,16,94,.25)}
+       box-shadow:0 2px 0 rgba(196,16,94,.3)}
   .btn:hover{filter:brightness(1.05)}
   .btn-note{font-size:.86rem;color:var(--ink-soft)}
 
@@ -82,10 +84,19 @@
   /* ---------- topo ---------- */
   .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);
           border-bottom:1px solid var(--line)}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.55rem;padding-bottom:.55rem}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding-top:.55rem;padding-bottom:.55rem}
   .topbar img{width:clamp(105px,26vw,150px)}
+  .topbar .right{display:flex;align-items:center;gap:.6rem;flex:0 0 auto}
   .topbar .tag{font-family:var(--display);font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
-               color:var(--pink-deep);background:var(--blush);border-radius:999px;padding:.35rem .8rem;flex:0 0 auto;white-space:nowrap}
+               color:var(--pink-deep);background:var(--blush);border-radius:999px;padding:.35rem .8rem;flex:0 0 auto;white-space:nowrap;
+               display:none}
+  /* a tag é identidade, o switch é função: abaixo de 560px o switch fica com o espaço */
+  @media (min-width:560px){.topbar .tag{display:inline-block}}
+  /* o seletor de idioma, igualzinho ao do hub */
+  .switch{display:flex;gap:.2rem;background:var(--blush);border-radius:999px;padding:.2rem;flex:0 0 auto}
+  .switch button{font-family:var(--display);font-weight:600;font-size:.74rem;letter-spacing:.08em;
+                 border:none;background:none;color:var(--ink-soft);padding:.34rem .6rem;border-radius:999px;cursor:pointer}
+  .switch button[aria-current="true"]{background:var(--paper);color:var(--pink-deep);box-shadow:0 1px 2px rgba(0,0,0,.07)}
 
   /* ---------------- HERO ---------------- */
   /* a foto real da duna holandesa ao pôr do sol continua aqui, com um véu
@@ -311,7 +322,14 @@
 <header class="topbar">
   <div class="wrap">
     <a href="#topo" aria-label="Maeli &amp; Marieke"><img src="assets/wordmark.png" alt="Maeli e Marieke"></a>
-    <span class="tag">⛺ Camping</span>
+    <div class="right">
+      <span class="tag" data-i18n="top.tag"></span>
+      <div class="switch" role="group" aria-label="Language">
+        <button data-lang="pt">PT</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="nl">NL</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -319,13 +337,13 @@
   <img class="blossom tl" src="assets/blossom-tl.png" alt="" aria-hidden="true">
   <img class="blossom tr" src="assets/blossom-tr.png" alt="" aria-hidden="true">
   <div class="wrap">
-    <p class="eyebrow">Camping crew · 26-28 de agosto</p>
-    <h1>Bora acampar <em>na praia</em> pro casamento da Maeli e da Marieke?</h1>
-    <p class="lede">Quinta, <b>27 de agosto</b>, Restaurant de Stern, na praia de Callantsoog, a 1h15 de Amsterdam. A gente chega na quarta, monta as barracas juntos a 2,5 km da festa, e sai na sexta com pé na areia. 🏖</p>
-    <p class="ticket">Qua 26 → Sex 28 de agosto <span>2 noites</span></p>
+    <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+    <h1 data-i18n-html="hero.h1"></h1>
+    <p class="lede" data-i18n-html="hero.lede"></p>
+    <p class="ticket" data-i18n-html="hero.ticket"></p>
     <div class="hero-cta">
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a>
-      <span class="btn-note">Leva 2 minutos · o grupo fecha <b>dom 26/7</b></span>
+      <a class="btn" data-link="form" data-i18n="cta.btn"></a>
+      <span class="btn-note" data-i18n-html="hero.note"></span>
     </div>
   </div>
 </header>
@@ -337,10 +355,10 @@
       <div class="helena-card">
         <div class="helena-av" aria-hidden="true">H</div>
         <div>
-          <p><b>Oi, amigos!</b> 🥂 Fiz esta página pro casamento lindo da Maeli e da Marieke. Tô organizando o transporte da nossa turma em <b>dois flows</b>. Escolhe o teu:</p>
-          <p style="margin-top:.7rem">🚌 <b>Não quer acampar?</b> Tem um ônibus saindo de Amsterdam Sloterdijk no dia do casamento, ida e volta. <a href="https://aboutcollab.github.io/wedding-bus/"><b>Se inscreve no flow do ônibus aqui</b></a>.</p>
-          <p style="margin-top:.7rem">⛺ <b>Bora transformar isso numa viagem deliciosa de três dias?</b> Então é este aqui. Preenche o formulário lá embaixo que eu organizo o resto: caronas, barracas, o camping, a ida pro casamento, tudo.</p>
-          <p style="margin-top:.7rem">E sim: usei o <b>Claudinho</b> 🤖 pra automatizar tudo isso e deixar a minha vida mais fácil. E porque eu <i>amo</i> mexer com essas coisas. 💛</p>
+          <p data-i18n-html="oi.p1"></p>
+          <p style="margin-top:.7rem" data-i18n-html="oi.p2"></p>
+          <p style="margin-top:.7rem" data-i18n-html="oi.p3"></p>
+          <p style="margin-top:.7rem" data-i18n-html="oi.p4"></p>
         </div>
       </div>
     </div>
@@ -348,98 +366,98 @@
 
   <section id="rota">
     <div class="wrap">
-      <span class="kicker">A rota</span>
-      <h2>Amsterdam → Callantsoog, de carona</h2>
-      <p class="sub">São 75 km, mais ou menos 1h15 pela A9/N9. A gente vai com os carros da própria camping crew.</p>
+      <span class="kicker" data-i18n="rota.kicker"></span>
+      <h2 data-i18n="rota.h"></h2>
+      <p class="sub" data-i18n="rota.sub"></p>
       <div class="rota-grid">
         <div>
           <ol class="rota">
             <li>
               <span class="lugar">Amsterdam</span>
-              <span class="meta">Qua 26 · de manhã</span>
-              <span class="nota">Saída combinada no grupo, quando eu souber quem tem carro e quantos lugares sobram.</span>
+              <span class="meta" data-i18n="rota.1meta"></span>
+              <span class="nota" data-i18n="rota.1nota"></span>
             </li>
             <li class="areia">
               <span class="lugar">Callassande</span>
-              <span class="meta">75 km · ~1h15 · check-in 13h</span>
-              <span class="nota">Vakantiepark Callassande, Voorweg 5a. Nossa vilinha por duas noites, a ~1 km da praia.</span>
+              <span class="meta" data-i18n="rota.2meta"></span>
+              <span class="nota" data-i18n="rota.2nota"></span>
             </li>
             <li class="chegada">
               <span class="lugar">Restaurant de Stern</span>
-              <span class="meta">Qui 27 · 2,5 km do camping</span>
-              <span class="nota">O casamento. Cinco minutos de carro, quinze de bike, e ninguém dirige (veja abaixo).</span>
+              <span class="meta" data-i18n="rota.3meta"></span>
+              <span class="nota" data-i18n="rota.3nota"></span>
             </li>
           </ol>
         </div>
         <figure class="mapinha">
-          <svg viewBox="0 0 200 190" role="img" aria-label="Mapa esquemático da costa de Noord-Holland com Callantsoog ao norte e Amsterdam ao sul">
+          <svg viewBox="0 0 200 190" role="img" aria-label="Callantsoog north, Amsterdam south">
             <path d="M118 8 C96 34 74 58 66 90 C58 122 68 150 86 174" fill="none" stroke="#C4105E" stroke-width="5" stroke-linecap="round" opacity=".25"/>
             <path d="M118 8 C96 34 74 58 66 90" fill="none" stroke="#F81878" stroke-width="5" stroke-linecap="round"/>
             <circle cx="67" cy="86" r="9" fill="#F81878"/>
             <text x="84" y="82" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#3A3739">CALLANTSOOG</text>
-            <text x="84" y="97" font-family="Quicksand, sans-serif" font-weight="500" font-size="10" fill="#6E686C">o casamento ⛺</text>
+            <text x="84" y="97" font-family="Quicksand, sans-serif" font-weight="500" font-size="10" fill="#6E686C" data-i18n="map.wedding"></text>
             <circle cx="88" cy="170" r="7" fill="#C4105E"/>
             <text x="102" y="168" font-family="Quicksand, sans-serif" font-weight="700" font-size="13" fill="#3A3739">AMSTERDAM</text>
             <text x="102" y="182" font-family="Quicksand, sans-serif" font-weight="500" font-size="10" fill="#6E686C">75 km</text>
-            <text x="8" y="40" font-family="Quicksand, sans-serif" font-weight="500" font-size="11" fill="#C4105E" opacity=".6">mar do norte</text>
+            <text x="8" y="40" font-family="Quicksand, sans-serif" font-weight="500" font-size="11" fill="#C4105E" opacity=".6" data-i18n="map.sea"></text>
           </svg>
-          <figcaption>Costa de Noord-Holland</figcaption>
+          <figcaption data-i18n="map.caption"></figcaption>
         </figure>
       </div>
-      <p class="aviso"><b>Sobre carro:</b> no formulário você diz se tem carro e quantos lugares livres sobram. Depois que o grupo fechar eu monto as caronas e, se faltar lugar, a gente aluga uma van pra completar e racha. Por isso a pergunta “você toparia dirigir uma van?” também está lá. <b>A minha van só chega na quinta</b> (o Peter traz, com parte da comida), então a subida de quarta é com carro de gente mesmo.</p>
+      <p class="aviso" data-i18n-html="rota.aviso"></p>
     </div>
   </section>
 
   <section class="hop" id="ninguem-dirige">
     <div class="wrap">
-      <span class="kicker">Quinta, dia do casamento</span>
-      <h2>Ninguém dirige</h2>
-      <p class="sub">São 2,5 km entre o camping e o de Stern. Vai ter brinde, vai ter festa até meia-noite, então ninguém pega o carro, ponto. Duas opções, as duas sendo fechadas agora:</p>
+      <span class="kicker" data-i18n="hop.kicker"></span>
+      <h2 data-i18n="hop.h"></h2>
+      <p class="sub" data-i18n="hop.sub"></p>
       <div class="hop-cards">
         <div class="hop-card principal">
-          <span class="tag">Opção principal · fechando</span>
-          <h3>Táxi da vila</h3>
-          <div class="hop-preco">€6-12</div>
-          <span class="por">por pessoa · ida e volta</span>
-          <p>O táxi local de Callantsoog faz o trajeto de van. A primeira leva sai do camping ~13h45 pra todo mundo estar lá 14h30, uma hora antes da cerimônia. A volta é ~00h, quando a festa acaba. Eu fecho o combinado assim que souber quantos somos. Quanto mais gente por van, mais barato fica pra cada um.</p>
+          <span class="tag" data-i18n="hop.taxiTag"></span>
+          <h3 data-i18n="hop.taxiH"></h3>
+          <div class="hop-preco" data-f="taxiPrice"></div>
+          <span class="por" data-i18n="hop.taxiPer"></span>
+          <p data-i18n="hop.taxiP"></p>
         </div>
         <div class="hop-card">
-          <span class="tag">Alternativa · e também é diversão</span>
-          <h3>Bicicleta</h3>
-          <div class="hop-preco">~€16</div>
-          <span class="por">por pessoa · quinta + sexta</span>
-          <p>Bike simples por €8/dia na Harry's Tweewielers, ali no Dorpsplein: pega quinta de manhã, devolve sexta. São 2,5 km de duna, e voltar de bike na praia à noite é meio mágico. Mesmo se o táxi rolar, quem quiser bike pode pegar a sua.</p>
+          <span class="tag" data-i18n="hop.bikeTag"></span>
+          <h3 data-i18n="hop.bikeH"></h3>
+          <div class="hop-preco" data-f="bikePrice"></div>
+          <span class="por" data-i18n="hop.bikePer"></span>
+          <p data-i18n="hop.bikeP"></p>
         </div>
       </div>
-      <p class="hop-fonte">Preços checados em 22/07/2026. Taxi Callantsoog 0224-581303 · Harry's Tweewielers, Dorpsplein 6, 0224-581787. Nada fechado ainda: os valores acima são o que a gente vai pagar se o grupo tiver o tamanho esperado.</p>
+      <p class="hop-fonte" data-i18n="hop.fonte"></p>
     </div>
   </section>
 
   <section class="dias" id="tres-dias">
     <div class="wrap">
-      <span class="kicker">O programa</span>
-      <h2>Os três dias</h2>
-      <p class="sub">Dois dias de areia com um casamento no meio.</p>
+      <span class="kicker" data-i18n="dias.kicker"></span>
+      <h2 data-i18n="dias.h"></h2>
+      <p class="sub" data-i18n="dias.sub"></p>
       <div class="fita">
         <div class="dia">
-          <div class="data">Qua 26</div>
-          <div class="titulo">Chegada ⛺</div>
+          <div class="data" data-i18n="d1.data"></div>
+          <div class="titulo" data-i18n="d1.titulo"></div>
           <ul>
-            <li><b>manhã</b> saída de Amsterdam, de carona</li>
-            <li><b>13h</b> check-in no camping</li>
-            <li>montar as barracas juntos (é metade da graça)</li>
-            <li><b>noite</b> jantar da camping crew no acampamento</li>
+            <li data-i18n-html="d1.l1"></li>
+            <li data-i18n-html="d1.l2"></li>
+            <li data-i18n-html="d1.l3"></li>
+            <li data-i18n-html="d1.l4"></li>
           </ul>
         </div>
         <div class="dia casamento">
-          <div class="data">Qui 27</div>
-          <div class="titulo">O casamento 🥂</div>
+          <div class="data" data-i18n="d2.data"></div>
+          <div class="titulo" data-i18n="d2.titulo"></div>
           <ul>
-            <li><b>13h45</b> saída do camping, de táxi ou bike</li>
-            <li><b>14h30</b> todo mundo no de Stern, uma hora antes 🥂</li>
-            <li><b>15h30</b> cerimônia 💍</li>
-            <li><b>16h30</b> bolo · <b>18h</b> jantar</li>
-            <li><b>20h</b> festa · <b>00h</b> volta pro camping</li>
+            <li data-i18n-html="d2.l1"></li>
+            <li data-i18n-html="d2.l2"></li>
+            <li data-i18n-html="d2.l3"></li>
+            <li data-i18n-html="d2.l4"></li>
+            <li data-i18n-html="d2.l5"></li>
           </ul>
           <div class="por-do-sol">
             <svg width="46" height="30" viewBox="0 0 46 30" aria-hidden="true">
@@ -447,36 +465,36 @@
               <rect x="4" y="17" width="38" height="13" fill="#9E0C4A"/>
               <line x1="2" y1="17.5" x2="44" y2="17.5" stroke="#FBD4E4" stroke-width="2"/>
             </svg>
-            <div>Pôr do sol na quinta<b>20h44</b></div>
+            <div data-i18n-html="d2.sunset"></div>
           </div>
         </div>
         <div class="dia">
-          <div class="data">Sex 28</div>
-          <div class="titulo">Praia e volta 🏖</div>
+          <div class="data" data-i18n="d3.data"></div>
+          <div class="titulo" data-i18n="d3.titulo"></div>
           <ul>
-            <li><b>até 11h</b> check-out (dá pra ficar na praia depois)</li>
-            <li>manhã de mar, 19°C, o mais quente do ano</li>
-            <li>almoço na vila, com cara de ressaca boa</li>
-            <li><b>tarde</b> volta pra Amsterdam</li>
+            <li data-i18n-html="d3.l1"></li>
+            <li data-i18n-html="d3.l2"></li>
+            <li data-i18n-html="d3.l3"></li>
+            <li data-i18n-html="d3.l4"></li>
           </ul>
         </div>
       </div>
       <div class="fita-legenda">
-        <span>montar acampamento</span>
-        <span>o grande dia</span>
-        <span>despedida com pé na areia</span>
+        <span data-i18n="fita.1"></span>
+        <span data-i18n="fita.2"></span>
+        <span data-i18n="fita.3"></span>
       </div>
     </div>
   </section>
 
   <section class="vilinha" id="vilinha">
     <div class="wrap">
-      <span class="kicker">Onde a gente fica</span>
-      <h2>Nossa vilinha de barracas, lado a lado</h2>
-      <p class="sub"><a href="https://www.callassande.nl/" target="_blank" rel="noopener"><b>Vakantiepark Callassande</b></a>, Voorweg 5a, a 1 km da praia e 2,5 km do casamento. Vou reservar pitches <b>Comfort Plus Royal</b> (o top do parque), sempre juntinhos, <b>quantos a gente precisar</b>, dependendo de quantos formos. Como cabe 1 barraca grande + 1 pequena por pitch, na prática cada pitch dá pra <b>4 ou 5 pessoas</b>.</p>
+      <span class="kicker" data-i18n="vil.kicker"></span>
+      <h2 data-i18n="vil.h"></h2>
+      <p class="sub" data-i18n-html="vil.sub"></p>
       <div class="pitches">
         <div class="pitch">
-          <span class="n">pitch 1</span>
+          <span class="n" data-i18n="vil.pitch1"></span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
             <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
             <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
@@ -484,10 +502,10 @@
             <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
-          <div class="quem">4-5 pessoas</div>
+          <div class="quem" data-i18n="vil.people"></div>
         </div>
         <div class="pitch">
-          <span class="n">pitch 2</span>
+          <span class="n" data-i18n="vil.pitch2"></span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
             <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
             <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
@@ -495,10 +513,10 @@
             <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
-          <div class="quem">4-5 pessoas</div>
+          <div class="quem" data-i18n="vil.people"></div>
         </div>
         <div class="pitch">
-          <span class="n">pitch 3</span>
+          <span class="n" data-i18n="vil.pitch3"></span>
           <svg width="100%" height="52" viewBox="0 0 150 52" aria-hidden="true">
             <path d="M8,46 L38,10 L68,46 Z" fill="#F0DAE8"/><path d="M31,46 L38,24 L45,46 Z" fill="#C4105E"/>
             <path d="M78,46 L96,24 L114,46 Z" fill="#F81878"/>
@@ -506,75 +524,75 @@
             <circle cx="126" cy="43" r="3" fill="#3A3739"/><circle cx="140" cy="43" r="3" fill="#3A3739"/>
           </svg>
           <div class="m2">~100 m²</div>
-          <div class="quem">4-5 pessoas</div>
+          <div class="quem" data-i18n="vil.people"></div>
         </div>
         <div class="pitch mais">
-          <span class="n">e mais…</span>
-          <div class="mais-txt">quantos a<br>gente precisar</div>
+          <span class="n" data-i18n="vil.more"></span>
+          <div class="mais-txt" data-i18n-html="vil.moreTxt"></div>
         </div>
       </div>
 
       <div class="banheiro">
         <span class="emoji" aria-hidden="true">🚿</span>
         <div>
-          <h3>Banheiro privativo em cada pitch</h3>
-          <p>Chuveiro, vaso e pia só nossos, do lado da barraca. É por isso que escolhi esse tipo de pitch e não o mais barato: num camping de três dias, isso é a diferença entre “aventura” e “aventura confortável”.</p>
+          <h3 data-i18n="vil.bathH"></h3>
+          <p data-i18n="vil.bathP"></p>
         </div>
       </div>
 
       <div class="fatos">
-        <div class="fato"><b>20°C dia · 14°C noite</b>Agosto na costa: leva casaco, pode chover</div>
-        <div class="fato"><b>Mar a 19°C</b>O mais quente do ano, dá pra nadar de verdade</div>
-        <div class="fato"><b>Silêncio 23h-07h</b>Regra do parque, o after é no sussurro</div>
+        <div class="fato" data-i18n-html="vil.fato1"></div>
+        <div class="fato" data-i18n-html="vil.fato2"></div>
+        <div class="fato" data-i18n-html="vil.fato3"></div>
       </div>
 
-      <p class="regras">No parque: <b>1 barraca grande + 1 pequena por pitch</b>, <b>1 carro por pitch</b> (o resto no estacionamento central), e o parque deixa até 6 pessoas por pitch, mas com uma barraca grande e uma pequena a conta real fica em <b>4 ou 5</b>. A gente reserva <b>quantos pitches precisar</b>: quanto mais gente confirmar, mais pitches lado a lado. Tem piscina coberta, mercadinho, wifi e tomada em cada pitch. As barracas são nossas: quem tem, traz; quem não tem, ganha vaga. Isso se organiza no formulário.</p>
+      <p class="regras" data-i18n-html="vil.regras"></p>
     </div>
   </section>
 
   <section class="custo" id="custo">
     <div class="wrap">
-      <span class="kicker">Quanto custa</span>
-      <h2>~€65-85 por pessoa, tudo incluído</h2>
-      <p class="sub">Três dias na praia, dormida, transporte e o casamento no meio. Tudo a preço de custo: eu junto tudo e divido pelo número de gente. Preferi chutar pra cima, então se sobrar, sobra a favor.</p>
+      <span class="kicker" data-i18n="custo.kicker"></span>
+      <h2 data-i18n="custo.h"></h2>
+      <p class="sub" data-i18n="custo.sub"></p>
       <div class="cards">
         <div class="card">
-          <span class="est">estimativa</span>
-          <div class="valor">€29-36</div>
-          <div class="oque">Camping</div>
-          <div class="det">2 noites · pitch de €144 dividido por 4 ou 5 pessoas</div>
+          <span class="est" data-i18n="custo.est"></span>
+          <div class="valor" data-f="prices.camp"></div>
+          <div class="oque" data-i18n="custo.c1"></div>
+          <div class="det" data-i18n="custo.c1d"></div>
         </div>
         <div class="card">
-          <span class="est">estimativa</span>
-          <div class="valor">€15-35</div>
-          <div class="oque">Carona</div>
-          <div class="det">gasolina rachada + tanque de agradecimento pra quem dirige (ou a van, se precisar)</div>
+          <span class="est" data-i18n="custo.est"></span>
+          <div class="valor" data-f="prices.ride"></div>
+          <div class="oque" data-i18n="custo.c2"></div>
+          <div class="det" data-i18n="custo.c2d"></div>
         </div>
         <div class="card">
-          <span class="est">estimativa</span>
-          <div class="valor">€6-16</div>
-          <div class="oque">Ida ao casamento</div>
-          <div class="det">táxi (~€6-12) ou bike (~€16), ida e volta na quinta</div>
+          <span class="est" data-i18n="custo.est"></span>
+          <div class="valor" data-f="prices.hop"></div>
+          <div class="oque" data-i18n="custo.c3"></div>
+          <div class="det" data-i18n="custo.c3d"></div>
         </div>
         <div class="card">
-          <span class="est">estimativa</span>
-          <div class="valor">€12-18</div>
-          <div class="oque">Comida</div>
-          <div class="det">jantar de quarta + cafés (na quinta o jantar é no casamento)</div>
+          <span class="est" data-i18n="custo.est"></span>
+          <div class="valor" data-f="prices.food"></div>
+          <div class="oque" data-i18n="custo.c4"></div>
+          <div class="det" data-i18n="custo.c4d"></div>
         </div>
       </div>
       <div class="total">
-        <span class="valor">~€65-85</span>
-        <span class="oque">por pessoa, os 3 dias</span>
-        <span class="det">Depende de quantas pessoas por pitch e por carro. Com os pitches cheios (5) e as caronas cheias fica mais perto de €65.</span>
+        <span class="valor" data-f="prices.total"></span>
+        <span class="oque" data-i18n="custo.totalK"></span>
+        <span class="det" data-i18n="custo.totalD"></span>
       </div>
       <div class="como-paga">
-        <b>Como o dinheiro funciona:</b>
+        <b data-i18n="pag.h"></b>
         <ul>
-          <li><b>Agora você não paga nada.</b> Só preenche o formulário.</li>
-          <li>Dom 26/7 o grupo fecha, eu reservo os pitches e pago com meu cartão.</li>
-          <li>Aí mando um <b>Tikkie no grupo</b>: custo real ÷ número de gente. Sem taxa, sem lucro, sem mistério.</li>
-          <li>No final eu posto a conta inteira no grupo: o que entrou, o que saiu, o que sobrou.</li>
+          <li data-i18n-html="pag.l1"></li>
+          <li data-i18n-html="pag.l2"></li>
+          <li data-i18n-html="pag.l3"></li>
+          <li data-i18n-html="pag.l4"></li>
         </ul>
       </div>
     </div>
@@ -582,105 +600,99 @@
 
   <section id="participar">
     <div class="wrap">
-      <span class="kicker">Como participar</span>
-      <h2>Cinco passos e você tá dentro</h2>
+      <span class="kicker" data-i18n="part.kicker"></span>
+      <h2 data-i18n="part.h"></h2>
       <ol class="passos">
-        <li><b>Preenche o formulário</b><span>Dois minutos. Diz se tem carro, se tem barraca, e o que você precisa emprestado.</span></li>
-        <li><b>Entra no grupo</b><span>O link aparece na tela de confirmação. É lá que tudo se combina.</span></li>
-        <li><b>Dom 26/7 o grupo fecha</b><span>Aí eu sei quantos somos, reservo os pitches e fecho o táxi.</span></li>
-        <li><b>Tikkie no grupo</b><span>Custo real dividido, alguns dias depois da reserva.</span></li>
-        <li><b>Semana antes: o que levar</b><span>Lista de equipamento, quem vai em qual carro, mapa dos pitches.</span></li>
+        <li><b data-i18n="p1.t"></b><span data-i18n="p1.d"></span></li>
+        <li><b data-i18n="p2.t"></b><span data-i18n="p2.d"></span></li>
+        <li><b data-i18n="p3.t"></b><span data-i18n="p3.d"></span></li>
+        <li><b data-i18n="p4.t"></b><span data-i18n="p4.d"></span></li>
+        <li><b data-i18n="p5.t"></b><span data-i18n="p5.d"></span></li>
       </ol>
       <div class="prazo">
-        <div class="display">Responde até domingo 26 de julho</div>
-        <p>Depois disso não dá mais: reservo o camping logo em seguida, e a essa altura a reserva não é reembolsável.</p>
+        <div class="display" data-i18n="prazo.h"></div>
+        <p data-i18n="prazo.p"></p>
       </div>
       <div class="cta-linha">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a>
-        <span class="btn-note">2 minutos · responde até dom 26/7</span>
+        <a class="btn" data-link="form" data-i18n="cta.btn"></a>
+        <span class="btn-note" data-i18n="cta.note"></span>
       </div>
     </div>
   </section>
 
   <section class="crew" id="crew">
     <div class="wrap">
-      <span class="kicker">A parede da camping crew</span>
-      <h2>Quem já tá dentro</h2>
-      <p class="sub">Cada “eu vou” vira um nome aqui. Preenche o formulário e aparece nesta parede.</p>
+      <span class="kicker" data-i18n="crew.kicker"></span>
+      <h2 data-i18n="crew.h"></h2>
+      <p class="sub" data-i18n="crew.sub"></p>
       <!-- CREW-WALL:START (gerado a partir da planilha Camping RSVP, não editar à mão) -->
       <div class="parede">
-        <div class="chip"><span class="nome">Helena</span><span class="badges">⛺ vou! · 🚗 tenho carro · 🎪 tenho barraca</span></div>
-        <div class="chip"><span class="nome">Peter</span><span class="badges">⛺ vou! · 🚐 traz a van na quinta</span></div>
-        <div class="chip vazio">seu nome aqui</div>
-        <div class="chip vazio">e o seu</div>
-        <div class="chip vazio">e o seu</div>
+        <div class="chip"><span class="nome">Helena</span><span class="badges" data-badges="go,car,tent"></span></div>
+        <div class="chip"><span class="nome">Peter</span><span class="badges" data-badges="go,vanThu"></span></div>
+        <div class="chip vazio" data-i18n="crew.you"></div>
+        <div class="chip vazio" data-i18n="crew.andYou"></div>
+        <div class="chip vazio" data-i18n="crew.andYou"></div>
       </div>
-      <p class="contador">2 confirmados · atualizado 22/07</p>
+      <p class="contador" data-count="2" data-updated="22/07"></p>
       <!-- CREW-WALL:END -->
-      <p class="legenda">Os selinhos: <code>⛺ vou!</code> · <code>🚗 tenho carro</code> · <code>🚐 topo dirigir van</code> · <code>🎪 tenho barraca</code> · <code>🛒 preciso de equipo</code>. Tudo isso sai direto do que você marcar no formulário. Só o primeiro nome aparece aqui, nada mais.</p>
+      <p class="legenda" data-i18n-html="crew.legenda"></p>
     </div>
   </section>
 
   <section id="faq">
     <div class="wrap">
-      <span class="kicker">Perguntas</span>
-      <h2>O que todo mundo pergunta</h2>
+      <span class="kicker" data-i18n="faq.kicker"></span>
+      <h2 data-i18n="faq.h"></h2>
       <div class="faq-grid">
 
         <details>
-          <summary>Preciso tirar folga?</summary>
-          <div class="resposta"><p>Quarta e sexta são dias úteis, então a maioria vai tirar dois dias. Se você só consegue um, tudo bem, dá pra chegar na quinta (veja abaixo).</p></div>
+          <summary data-i18n="q.folga"></summary>
+          <div class="resposta"><p data-i18n="a.folga"></p></div>
         </details>
 
         <details>
-          <summary>Posso ir só na quinta, do casamento?</summary>
-          <div class="resposta"><p>Dá sim. Marca isso no formulário: você entra na divisão de uma noite só e paga bem menos. A gente encaixa você numa barraca e numa carona igual.</p></div>
+          <summary data-i18n="q.soquinta"></summary>
+          <div class="resposta"><p data-i18n="a.soquinta"></p></div>
         </details>
 
         <details>
-          <summary>Não tenho barraca.</summary>
-          <div class="resposta"><p>Marca no formulário que precisa de vaga. Quem tem barraca grande traz, e a gente distribui as vagas antes de subir. Ninguém fica de fora por causa disso. Se você tiver saco de dormir ou isolante pra emprestar, marca também: metade do equipamento vai ser emprestado entre a gente.</p></div>
+          <summary data-i18n="q.barraca"></summary>
+          <div class="resposta"><p data-i18n="a.barraca"></p></div>
         </details>
 
         <details>
-          <summary>Não tenho carro nem carteira.</summary>
-          <div class="resposta"><p>Sem problema, a maioria não tem. Marca “não tenho carro” e eu te encaixo numa carona. As caronas só são montadas depois que o grupo fechar, quando eu sei quem vai e quantos lugares sobram.</p></div>
+          <summary data-i18n="q.carro"></summary>
+          <div class="resposta"><p data-i18n="a.carro"></p></div>
         </details>
 
         <details>
-          <summary>E ninguém dirige mesmo na quinta?</summary>
-          <div class="resposta">
-            <p>Ninguém. São 2,5 km e a festa vai até meia-noite, então não tem “um motorista”, tem duas opções pagas por todo mundo: o <b>táxi da vila</b> (opção principal, ~€6-12 por pessoa ida e volta) ou <b>bike</b> (~€16 pelos dois dias).</p>
-            <p>Fecho o táxi assim que souber quantos somos. Quem preferir bike pode pegar bike de qualquer jeito.</p>
-          </div>
+          <summary data-i18n="q.dirige"></summary>
+          <div class="resposta" data-i18n-html="a.dirige"></div>
         </details>
 
         <details>
-          <summary>Posso levar alguém?</summary>
-          <div class="resposta"><p>Pode, se a pessoa também estiver convidada pro casamento. Coloca o nome dela nas observações do formulário pra eu contar as vagas certo e reservar pitch suficiente.</p></div>
+          <summary data-i18n="q.alguem"></summary>
+          <div class="resposta"><p data-i18n="a.alguem"></p></div>
         </details>
 
         <details>
-          <summary>E se eu disser sim e depois desistir?</summary>
-          <div class="resposta">
-            <p><b>Até dom 26/7:</b> muda de ideia à vontade, é só me mandar mensagem, zero drama.</p>
-            <p><b>Depois disso:</b> eu já reservei e paguei os pitches, e a essa altura o parque não devolve nada. Então o Tikkie vale. Se acontecer alguma coisa séria, me chama que a gente dá um jeito. E se você achar alguém pra ocupar sua vaga, melhor ainda.</p>
-          </div>
+          <summary data-i18n="q.desistir"></summary>
+          <div class="resposta" data-i18n-html="a.desistir"></div>
         </details>
 
         <details>
-          <summary>Tô apertada de grana esse mês.</summary>
-          <div class="resposta"><p>Me chama no privado. Sério. A gente resolve: parcelar, ajustar, o que for. Ninguém fica de fora dessa por causa de dinheiro. 💛</p></div>
+          <summary data-i18n="q.grana"></summary>
+          <div class="resposta"><p data-i18n="a.grana"></p></div>
         </details>
 
         <details>
-          <summary>Quantas vagas tem?</summary>
-          <div class="resposta"><p>Depende de quantos a gente for! Cada pitch dá pra 4 ou 5 pessoas (1 barraca grande + 1 pequena), e eu reservo <b>quantos pitches precisar</b>, sempre lado a lado. Por isso o prazo importa: quanto antes você confirmar, mais fácil garantir todo mundo junto.</p></div>
+          <summary data-i18n="q.vagas"></summary>
+          <div class="resposta" data-i18n-html="a.vagas"></div>
         </details>
 
         <details>
-          <summary>Como eu levo minhas coisas?</summary>
-          <div class="resposta"><p>No carro da carona. Barraca, saco de dormir, caixa térmica, cadeira, tudo sobe junto na quarta de manhã. Se você tem equipamento pra emprestar pra camping crew, marca no formulário que eu monto a lista do que ainda falta.</p></div>
+          <summary data-i18n="q.coisas"></summary>
+          <div class="resposta"><p data-i18n="a.coisas"></p></div>
         </details>
 
       </div>
@@ -693,18 +705,586 @@
   <img class="blossom br" src="assets/blossom-br.png" alt="" aria-hidden="true">
   <div class="wrap">
     <div class="contact-card">
-      <span class="kicker">Qualquer dúvida</span>
-      <h2>Fala com a Helena</h2>
+      <span class="kicker" data-i18n="ct.kicker"></span>
+      <h2 data-i18n="ct.h"></h2>
       <a class="fone" href="https://wa.me/31686409404">+31 6 8640 9404</a>
-      <p>WhatsApp, de preferência: tô com muita coisa desse casamento na mão e nem sempre consigo atender. Se eu demorar um pouco pra responder, não some: eu chego lá. 💛</p>
-      <p style="margin-top:1.5rem"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform">Tô dentro →</a></p>
+      <p data-i18n="ct.p"></p>
+      <p style="margin-top:1.5rem"><a class="btn" data-link="form" data-i18n="cta.btn"></a></p>
     </div>
 
     <img class="foot-mark" src="assets/wordmark.png" alt="Maeli e Marieke">
     <div class="foot-d">27 . 08 . 2026</div>
-    <p class="rodape">Camping do casamento da Maeli &amp; Marieke · Vakantiepark Callassande, Voorweg 5a, Callantsoog · qua 26 → sex 28 de agosto de 2026. Página feita pela Helena (com o Claudinho 🤖) pra organizar o camping da nossa turma. Preços verificados em 22/07/2026 (Callassande · Harry's Tweewielers · Taxi Callantsoog).</p>
+    <p class="rodape" data-i18n="foot.note"></p>
   </div>
 </footer>
 
+<script>
+/* ═══════════════════════════════════════════════════════════════════════
+   FACTS: cada fato duro mora aqui UMA vez.
+   Mude um preço, uma data ou um prazo aqui e os três idiomas mudam juntos.
+   Nunca redigite um fato dentro de COPY.
+   Mesmo padrão do hub em aboutcollab.github.io/maeli-marieke-wedding.
+   ═══════════════════════════════════════════════════════════════════════ */
+const FACTS = {
+  /* datas, três grafias lado a lado pra nunca divergirem */
+  campDates:  { pt:"26-28 de agosto",  en:"26-28 August",   nl:"26-28 augustus" },
+  campRange:  { pt:"Qua 26 → Sex 28 de agosto", en:"Wed 26 → Fri 28 August", nl:"Wo 26 → Vr 28 augustus" },
+  weddingDay: { pt:"quinta, 27 de agosto", en:"Thursday 27 August", nl:"donderdag 27 augustus" },
+
+  /* PRAZO ATUALIZADO 27/07/2026 pela Helena: o antigo (dom 26/7) já tinha passado */
+  deadline:      { pt:"domingo, 2 de agosto", en:"Sunday 2 August", nl:"zondag 2 augustus" },
+  deadlineShort: { pt:"dom 2/8",              en:"Sun 2 Aug",       nl:"zo 2 aug" },
+
+  /* preços verificados em 22/07/2026, mesmas faixas em todo idioma */
+  taxiPrice: "€6-12",
+  bikePrice: "~€16",
+  prices: { camp:"€29-36", ride:"€15-35", hop:"€6-16", food:"€12-18", total:"~€65-85" },
+
+  campsite: "Vakantiepark Callassande",
+  venue:    "Restaurant de Stern",
+  sunset:   { pt:"20h44", en:"20:44", nl:"20:44" },
+
+  links: { form:"https://docs.google.com/forms/d/e/1FAIpQLSfbQEqbUD4ThL7SaGOATkOdeLiuq7Sc2T4_g4xrSXnB_FJGqQ/viewform",
+           bus:"https://aboutcollab.github.io/wedding-bus/",
+           callassande:"https://www.callassande.nl/",
+           wa:"https://wa.me/31686409404" }
+};
+
+/* ═══════════════════════════════════════════════════════════════════════
+   COPY: os três idiomas em linhas vizinhas, sempre.
+   {placeholders} são preenchidos a partir de FACTS.
+   O português é o original. EN e NL seguem o mesmo tom, informal e caloroso.
+   ═══════════════════════════════════════════════════════════════════════ */
+const COPY = {
+
+  "meta.title": {
+    pt:"Camping do casamento da Maeli e da Marieke · {campDates} 2026",
+    en:"Maeli & Marieke's wedding camping · {campDates} 2026",
+    nl:"Kamperen bij de bruiloft van Maeli en Marieke · {campDates} 2026" },
+
+  "top.tag": { pt:"⛺ Camping", en:"⛺ Camping", nl:"⛺ Kamperen" },
+
+  "hero.eyebrow": {
+    pt:"Camping crew · {campDates}",
+    en:"Camping crew · {campDates}",
+    nl:"Camping crew · {campDates}" },
+  "hero.h1": {
+    pt:"Bora acampar <em>na praia</em> pro casamento da Maeli e da Marieke?",
+    en:"Fancy camping <em>on the beach</em> for Maeli and Marieke's wedding?",
+    nl:"Zin om <em>op het strand</em> te kamperen voor de bruiloft van Maeli en Marieke?" },
+  "hero.lede": {
+    pt:"Quinta, <b>27 de agosto</b>, Restaurant de Stern, na praia de Callantsoog, a 1h15 de Amsterdam. A gente chega na quarta, monta as barracas juntos a 2,5 km da festa, e sai na sexta com pé na areia. 🏖",
+    en:"Thursday <b>27 August</b>, Restaurant de Stern, on the beach at Callantsoog, an hour and fifteen from Amsterdam. We arrive on Wednesday, pitch the tents together 2.5 km from the party, and leave on Friday with sand still on our feet. 🏖",
+    nl:"Donderdag <b>27 augustus</b>, Restaurant de Stern, op het strand van Callantsoog, vijfenzeventig minuten vanaf Amsterdam. We komen woensdag aan, zetten samen de tenten op 2,5 km van het feest, en vertrekken vrijdag met zand aan onze voeten. 🏖" },
+  "hero.ticket": {
+    pt:"{campRange} <span>2 noites</span>",
+    en:"{campRange} <span>2 nights</span>",
+    nl:"{campRange} <span>2 nachten</span>" },
+  "hero.note": {
+    pt:"Leva 2 minutos · o grupo fecha <b>{deadlineShort}</b>",
+    en:"Takes 2 minutes · the group closes <b>{deadlineShort}</b>",
+    nl:"Kost 2 minuten · de groep sluit <b>{deadlineShort}</b>" },
+
+  "cta.btn":  { pt:"Tô dentro →", en:"I'm in →", nl:"Ik doe mee →" },
+  "cta.note": {
+    pt:"2 minutos · responde até {deadlineShort}",
+    en:"2 minutes · reply by {deadlineShort}",
+    nl:"2 minuten · reageer vóór {deadlineShort}" },
+
+  "oi.p1": {
+    pt:"<b>Oi, amigos!</b> 🥂 Fiz esta página pro casamento lindo da Maeli e da Marieke. Tô organizando o transporte da nossa turma em <b>dois flows</b>. Escolhe o teu:",
+    en:"<b>Hi, friends!</b> 🥂 I made this page for Maeli and Marieke's beautiful wedding. I'm organising our crowd's transport in <b>two flows</b>. Pick yours:",
+    nl:"<b>Hoi, vrienden!</b> 🥂 Ik heb deze pagina gemaakt voor de prachtige bruiloft van Maeli en Marieke. Ik regel het vervoer van onze groep in <b>twee stromen</b>. Kies de jouwe:" },
+  "oi.p2": {
+    pt:"🚌 <b>Não quer acampar?</b> Tem um ônibus saindo de Amsterdam Sloterdijk no dia do casamento, ida e volta. <a data-langlink=\"bus\"><b>Se inscreve no flow do ônibus aqui</b></a>.",
+    en:"🚌 <b>Not up for camping?</b> There's a coach from Amsterdam Sloterdijk on the wedding day, there and back. <a data-langlink=\"bus\"><b>Sign up for the coach flow here</b></a>.",
+    nl:"🚌 <b>Geen zin in kamperen?</b> Er rijdt op de trouwdag een bus vanaf Amsterdam Sloterdijk, heen en terug. <a data-langlink=\"bus\"><b>Meld je hier aan voor de bus</b></a>." },
+  "oi.p3": {
+    pt:"⛺ <b>Bora transformar isso numa viagem deliciosa de três dias?</b> Então é este aqui. Preenche o formulário lá embaixo que eu organizo o resto: caronas, barracas, o camping, a ida pro casamento, tudo.",
+    en:"⛺ <b>Want to turn this into a glorious three-day trip?</b> Then it's this one. Fill in the form below and I'll organise the rest: lifts, tents, the campsite, getting to the wedding, all of it.",
+    nl:"⛺ <b>Zin om er een heerlijk driedaags uitje van te maken?</b> Dan is dit hem. Vul het formulier hieronder in, dan regel ik de rest: ritten, tenten, de camping, de rit naar de bruiloft, alles." },
+  "oi.p4": {
+    pt:"E sim: usei o <b>Claudinho</b> 🤖 pra automatizar tudo isso e deixar a minha vida mais fácil. E porque eu <i>amo</i> mexer com essas coisas. 💛",
+    en:"And yes: I used <b>Claudinho</b> 🤖 to automate all of this and make my life easier. And because I <i>love</i> tinkering with this stuff. 💛",
+    nl:"En ja: ik heb <b>Claudinho</b> 🤖 gebruikt om dit allemaal te automatiseren en mijn leven makkelijker te maken. En omdat ik <i>dol</i> ben op dit soort geknutsel. 💛" },
+
+  "rota.kicker": { pt:"A rota", en:"The route", nl:"De route" },
+  "rota.h": {
+    pt:"Amsterdam → Callantsoog, de carona",
+    en:"Amsterdam → Callantsoog, by lift",
+    nl:"Amsterdam → Callantsoog, met een lift" },
+  "rota.sub": {
+    pt:"São 75 km, mais ou menos 1h15 pela A9/N9. A gente vai com os carros da própria camping crew.",
+    en:"It's 75 km, roughly an hour and fifteen on the A9/N9. We go in the camping crew's own cars.",
+    nl:"Het is 75 km, ongeveer vijfenzeventig minuten via de A9/N9. We gaan met de auto's van de camping crew zelf." },
+  "rota.1meta": { pt:"Qua 26 · de manhã", en:"Wed 26 · morning", nl:"Wo 26 · ochtend" },
+  "rota.1nota": {
+    pt:"Saída combinada no grupo, quando eu souber quem tem carro e quantos lugares sobram.",
+    en:"Departure agreed in the group, once I know who has a car and how many seats are free.",
+    nl:"Vertrek spreken we af in de groep, zodra ik weet wie een auto heeft en hoeveel plekken er vrij zijn." },
+  "rota.2meta": { pt:"75 km · ~1h15 · check-in 13h", en:"75 km · ~1h15 · check-in 13:00", nl:"75 km · ~1u15 · check-in 13:00" },
+  "rota.2nota": {
+    pt:"{campsite}, Voorweg 5a. Nossa vilinha por duas noites, a ~1 km da praia.",
+    en:"{campsite}, Voorweg 5a. Our little village for two nights, about 1 km from the beach.",
+    nl:"{campsite}, Voorweg 5a. Ons dorpje voor twee nachten, zo'n 1 km van het strand." },
+  "rota.3meta": { pt:"Qui 27 · 2,5 km do camping", en:"Thu 27 · 2.5 km from the campsite", nl:"Do 27 · 2,5 km van de camping" },
+  "rota.3nota": {
+    pt:"O casamento. Cinco minutos de carro, quinze de bike, e ninguém dirige (veja abaixo).",
+    en:"The wedding. Five minutes by car, fifteen by bike, and nobody drives (see below).",
+    nl:"De bruiloft. Vijf minuten met de auto, vijftien op de fiets, en niemand rijdt (zie hieronder)." },
+  "map.wedding": { pt:"o casamento ⛺", en:"the wedding ⛺", nl:"de bruiloft ⛺" },
+  "map.sea": { pt:"mar do norte", en:"north sea", nl:"noordzee" },
+  "map.caption": { pt:"Costa de Noord-Holland", en:"The Noord-Holland coast", nl:"De Noord-Hollandse kust" },
+  "rota.aviso": {
+    pt:"<b>Sobre carro:</b> no formulário você diz se tem carro e quantos lugares livres sobram. Depois que o grupo fechar eu monto as caronas e, se faltar lugar, a gente aluga uma van pra completar e racha. Por isso a pergunta “você toparia dirigir uma van?” também está lá. <b>A minha van só chega na quinta</b> (o Peter traz, com parte da comida), então a subida de quarta é com carro de gente mesmo.",
+    en:"<b>About cars:</b> in the form you say whether you have a car and how many free seats there are. Once the group closes I put the lifts together and, if we're short on seats, we rent a van to fill the gap and split the cost. That's why the question “would you be up for driving a van?” is in there too. <b>My van only arrives on Thursday</b> (Peter brings it, with some of the food), so Wednesday's trip up is in people's own cars.",
+    nl:"<b>Over auto's:</b> in het formulier geef je aan of je een auto hebt en hoeveel plekken er vrij zijn. Zodra de groep sluit maak ik de ritindeling, en komen we plekken tekort, dan huren we een busje erbij en delen we de kosten. Daarom staat de vraag “zou je een busje willen rijden?” er ook in. <b>Mijn busje komt pas donderdag</b> (Peter brengt het, met een deel van het eten), dus de rit omhoog op woensdag gaat met de auto's van mensen zelf." },
+
+  "hop.kicker": { pt:"Quinta, dia do casamento", en:"Thursday, wedding day", nl:"Donderdag, de trouwdag" },
+  "hop.h": { pt:"Ninguém dirige", en:"Nobody drives", nl:"Niemand rijdt" },
+  "hop.sub": {
+    pt:"São 2,5 km entre o camping e o de Stern. Vai ter brinde, vai ter festa até meia-noite, então ninguém pega o carro, ponto. Duas opções, as duas sendo fechadas agora:",
+    en:"It's 2.5 km between the campsite and De Stern. There will be toasts, there will be a party until midnight, so nobody touches a car, full stop. Two options, both being arranged now:",
+    nl:"Het is 2,5 km tussen de camping en De Stern. Er wordt geproost, er wordt gefeest tot middernacht, dus niemand stapt in de auto, punt. Twee opties, allebei nu in de maak:" },
+  "hop.taxiTag": { pt:"Opção principal · fechando", en:"Main option · being arranged", nl:"Hoofdoptie · in de maak" },
+  "hop.taxiH": { pt:"Táxi da vila", en:"The village taxi", nl:"De dorpstaxi" },
+  "hop.taxiPer": { pt:"por pessoa · ida e volta", en:"per person · there and back", nl:"per persoon · heen en terug" },
+  "hop.taxiP": {
+    pt:"O táxi local de Callantsoog faz o trajeto de van. A primeira leva sai do camping ~13h45 pra todo mundo estar lá 14h30, uma hora antes da cerimônia. A volta é ~00h, quando a festa acaba. Eu fecho o combinado assim que souber quantos somos. Quanto mais gente por van, mais barato fica pra cada um.",
+    en:"The local Callantsoog taxi does the run by van. The first load leaves the campsite around 13:45 so everyone is there by 14:30, an hour before the ceremony. The way back is around midnight, when the party ends. I'll lock it in as soon as I know how many we are. The more people per van, the cheaper it is for each of us.",
+    nl:"De lokale taxi van Callantsoog rijdt het traject met een busje. De eerste lading vertrekt rond 13:45 van de camping, zodat iedereen om 14:30 aanwezig is, een uur voor de ceremonie. Terug rond middernacht, als het feest afgelopen is. Ik maak het rond zodra ik weet met hoeveel we zijn. Hoe meer mensen per busje, hoe goedkoper voor ieder van ons." },
+  "hop.bikeTag": { pt:"Alternativa · e também é diversão", en:"Alternative · and also just fun", nl:"Alternatief · en ook gewoon leuk" },
+  "hop.bikeH": { pt:"Bicicleta", en:"Bike", nl:"Fiets" },
+  "hop.bikePer": { pt:"por pessoa · quinta + sexta", en:"per person · Thursday + Friday", nl:"per persoon · donderdag + vrijdag" },
+  "hop.bikeP": {
+    pt:"Bike simples por €8/dia na Harry's Tweewielers, ali no Dorpsplein: pega quinta de manhã, devolve sexta. São 2,5 km de duna, e voltar de bike na praia à noite é meio mágico. Mesmo se o táxi rolar, quem quiser bike pode pegar a sua.",
+    en:"A basic bike is €8/day at Harry's Tweewielers on the Dorpsplein: pick it up Thursday morning, drop it back Friday. It's 2.5 km through the dunes, and cycling back along the beach at night is a little bit magic. Even if the taxi happens, anyone who wants a bike can still get one.",
+    nl:"Een simpele fiets kost €8 per dag bij Harry's Tweewielers aan het Dorpsplein: donderdagochtend ophalen, vrijdag terugbrengen. Het is 2,5 km door de duinen, en 's avonds langs het strand terugfietsen is best magisch. Ook als de taxi doorgaat, kan wie wil gewoon een fiets pakken." },
+  "hop.fonte": {
+    pt:"Preços checados em 22/07/2026. Taxi Callantsoog 0224-581303 · Harry's Tweewielers, Dorpsplein 6, 0224-581787. Nada fechado ainda: os valores acima são o que a gente vai pagar se o grupo tiver o tamanho esperado.",
+    en:"Prices checked on 22/07/2026. Taxi Callantsoog 0224-581303 · Harry's Tweewielers, Dorpsplein 6, 0224-581787. Nothing is locked in yet: the amounts above are what we'll pay if the group is the size we expect.",
+    nl:"Prijzen gecheckt op 22-07-2026. Taxi Callantsoog 0224-581303 · Harry's Tweewielers, Dorpsplein 6, 0224-581787. Nog niets vastgelegd: de bedragen hierboven zijn wat we betalen als de groep de verwachte omvang heeft." },
+
+  "dias.kicker": { pt:"O programa", en:"The programme", nl:"Het programma" },
+  "dias.h": { pt:"Os três dias", en:"The three days", nl:"De drie dagen" },
+  "dias.sub": {
+    pt:"Dois dias de areia com um casamento no meio.",
+    en:"Two days of sand with a wedding in the middle.",
+    nl:"Twee dagen zand met een bruiloft ertussen." },
+
+  "d1.data": { pt:"Qua 26", en:"Wed 26", nl:"Wo 26" },
+  "d1.titulo": { pt:"Chegada ⛺", en:"Arrival ⛺", nl:"Aankomst ⛺" },
+  "d1.l1": { pt:"<b>manhã</b> saída de Amsterdam, de carona", en:"<b>morning</b> leave Amsterdam, sharing cars", nl:"<b>ochtend</b> vertrek uit Amsterdam, samen in de auto" },
+  "d1.l2": { pt:"<b>13h</b> check-in no camping", en:"<b>13:00</b> check-in at the campsite", nl:"<b>13:00</b> inchecken op de camping" },
+  "d1.l3": { pt:"montar as barracas juntos (é metade da graça)", en:"pitch the tents together (that's half the fun)", nl:"samen de tenten opzetten (dat is de helft van de lol)" },
+  "d1.l4": { pt:"<b>noite</b> jantar da camping crew no acampamento", en:"<b>evening</b> camping crew dinner at the site", nl:"<b>avond</b> diner met de camping crew op de camping" },
+
+  "d2.data": { pt:"Qui 27", en:"Thu 27", nl:"Do 27" },
+  "d2.titulo": { pt:"O casamento 🥂", en:"The wedding 🥂", nl:"De bruiloft 🥂" },
+  "d2.l1": { pt:"<b>13h45</b> saída do camping, de táxi ou bike", en:"<b>13:45</b> leave the campsite, by taxi or bike", nl:"<b>13:45</b> vertrek van de camping, met taxi of fiets" },
+  "d2.l2": { pt:"<b>14h30</b> todo mundo no de Stern, uma hora antes 🥂", en:"<b>14:30</b> everyone at De Stern, an hour early 🥂", nl:"<b>14:30</b> iedereen bij De Stern, een uur van tevoren 🥂" },
+  "d2.l3": { pt:"<b>15h30</b> cerimônia 💍", en:"<b>15:30</b> ceremony 💍", nl:"<b>15:30</b> ceremonie 💍" },
+  "d2.l4": { pt:"<b>16h30</b> bolo · <b>18h</b> jantar", en:"<b>16:30</b> cake · <b>18:00</b> dinner", nl:"<b>16:30</b> taart · <b>18:00</b> diner" },
+  "d2.l5": { pt:"<b>20h</b> festa · <b>00h</b> volta pro camping", en:"<b>20:00</b> party · <b>00:00</b> back to the campsite", nl:"<b>20:00</b> feest · <b>00:00</b> terug naar de camping" },
+  "d2.sunset": {
+    pt:"Pôr do sol na quinta<b>{sunset}</b>",
+    en:"Sunset on Thursday<b>{sunset}</b>",
+    nl:"Zonsondergang donderdag<b>{sunset}</b>" },
+
+  "d3.data": { pt:"Sex 28", en:"Fri 28", nl:"Vr 28" },
+  "d3.titulo": { pt:"Praia e volta 🏖", en:"Beach and home 🏖", nl:"Strand en terug 🏖" },
+  "d3.l1": { pt:"<b>até 11h</b> check-out (dá pra ficar na praia depois)", en:"<b>by 11:00</b> check-out (you can stay on the beach after)", nl:"<b>vóór 11:00</b> uitchecken (daarna kun je op het strand blijven)" },
+  "d3.l2": { pt:"manhã de mar, 19°C, o mais quente do ano", en:"a morning in the sea, 19°C, the warmest it gets all year", nl:"een ochtend in zee, 19°C, het warmst van het hele jaar" },
+  "d3.l3": { pt:"almoço na vila, com cara de ressaca boa", en:"lunch in the village, with a good sort of hangover", nl:"lunch in het dorp, met een aangename kater" },
+  "d3.l4": { pt:"<b>tarde</b> volta pra Amsterdam", en:"<b>afternoon</b> back to Amsterdam", nl:"<b>middag</b> terug naar Amsterdam" },
+
+  "fita.1": { pt:"montar acampamento", en:"setting up camp", nl:"kamp opzetten" },
+  "fita.2": { pt:"o grande dia", en:"the big day", nl:"de grote dag" },
+  "fita.3": { pt:"despedida com pé na areia", en:"goodbye with sand on our feet", nl:"afscheid met zand aan onze voeten" },
+
+  "vil.kicker": { pt:"Onde a gente fica", en:"Where we stay", nl:"Waar we verblijven" },
+  "vil.h": {
+    pt:"Nossa vilinha de barracas, lado a lado",
+    en:"Our little tent village, side by side",
+    nl:"Ons kleine tentendorp, zij aan zij" },
+  "vil.sub": {
+    pt:"<a href=\"{links.callassande}\" target=\"_blank\" rel=\"noopener\"><b>{campsite}</b></a>, Voorweg 5a, a 1 km da praia e 2,5 km do casamento. Vou reservar pitches <b>Comfort Plus Royal</b> (o top do parque), sempre juntinhos, <b>quantos a gente precisar</b>, dependendo de quantos formos. Como cabe 1 barraca grande + 1 pequena por pitch, na prática cada pitch dá pra <b>4 ou 5 pessoas</b>.",
+    en:"<a href=\"{links.callassande}\" target=\"_blank\" rel=\"noopener\"><b>{campsite}</b></a>, Voorweg 5a, 1 km from the beach and 2.5 km from the wedding. I'll book <b>Comfort Plus Royal</b> pitches (the best the park has), always next to each other, <b>as many as we need</b>, depending on how many we are. Since one big tent plus one small one fits per pitch, in practice each pitch takes <b>4 or 5 people</b>.",
+    nl:"<a href=\"{links.callassande}\" target=\"_blank\" rel=\"noopener\"><b>{campsite}</b></a>, Voorweg 5a, 1 km van het strand en 2,5 km van de bruiloft. Ik reserveer <b>Comfort Plus Royal</b>-plaatsen (het beste van het park), altijd naast elkaar, <b>zoveel als we nodig hebben</b>, afhankelijk van met hoeveel we zijn. Omdat er per plaats één grote en één kleine tent past, gaan er in de praktijk <b>4 of 5 mensen</b> op een plaats." },
+  "vil.pitch1": { pt:"pitch 1", en:"pitch 1", nl:"plaats 1" },
+  "vil.pitch2": { pt:"pitch 2", en:"pitch 2", nl:"plaats 2" },
+  "vil.pitch3": { pt:"pitch 3", en:"pitch 3", nl:"plaats 3" },
+  "vil.people": { pt:"4-5 pessoas", en:"4-5 people", nl:"4-5 mensen" },
+  "vil.more": { pt:"e mais…", en:"and more…", nl:"en meer…" },
+  "vil.moreTxt": { pt:"quantos a<br>gente precisar", en:"as many as<br>we need", nl:"zoveel als<br>we nodig hebben" },
+  "vil.bathH": {
+    pt:"Banheiro privativo em cada pitch",
+    en:"A private bathroom on every pitch",
+    nl:"Een eigen badkamer op elke plaats" },
+  "vil.bathP": {
+    pt:"Chuveiro, vaso e pia só nossos, do lado da barraca. É por isso que escolhi esse tipo de pitch e não o mais barato: num camping de três dias, isso é a diferença entre “aventura” e “aventura confortável”.",
+    en:"A shower, a toilet and a sink that are just ours, right next to the tent. That's why I picked this kind of pitch and not the cheapest one: on a three-day camping trip, it's the difference between “adventure” and “comfortable adventure”.",
+    nl:"Een douche, een wc en een wasbak die alleen van ons zijn, pal naast de tent. Daarom koos ik dit type plaats en niet de goedkoopste: bij drie dagen kamperen is dat het verschil tussen “avontuur” en “comfortabel avontuur”." },
+  "vil.fato1": {
+    pt:"<b>20°C dia · 14°C noite</b>Agosto na costa: leva casaco, pode chover",
+    en:"<b>20°C day · 14°C night</b>August on the coast: bring a jacket, it might rain",
+    nl:"<b>20°C overdag · 14°C 's nachts</b>Augustus aan de kust: neem een jas mee, het kan regenen" },
+  "vil.fato2": {
+    pt:"<b>Mar a 19°C</b>O mais quente do ano, dá pra nadar de verdade",
+    en:"<b>Sea at 19°C</b>The warmest it gets all year, you can genuinely swim",
+    nl:"<b>Zee van 19°C</b>Het warmst van het hele jaar, je kunt echt zwemmen" },
+  "vil.fato3": {
+    pt:"<b>Silêncio 23h-07h</b>Regra do parque, o after é no sussurro",
+    en:"<b>Quiet 23:00-07:00</b>Park rule, so the afterparty is a whispered one",
+    nl:"<b>Stilte 23:00-07:00</b>Regel van het park, dus de afterparty gaat fluisterend" },
+  "vil.regras": {
+    pt:"No parque: <b>1 barraca grande + 1 pequena por pitch</b>, <b>1 carro por pitch</b> (o resto no estacionamento central), e o parque deixa até 6 pessoas por pitch, mas com uma barraca grande e uma pequena a conta real fica em <b>4 ou 5</b>. A gente reserva <b>quantos pitches precisar</b>: quanto mais gente confirmar, mais pitches lado a lado. Tem piscina coberta, mercadinho, wifi e tomada em cada pitch. As barracas são nossas: quem tem, traz; quem não tem, ganha vaga. Isso se organiza no formulário.",
+    en:"At the park: <b>1 big tent + 1 small one per pitch</b>, <b>1 car per pitch</b> (the rest go in the central car park), and the park allows up to 6 people per pitch, but with one big tent and one small one the real number is <b>4 or 5</b>. We book <b>as many pitches as we need</b>: the more people confirm, the more pitches side by side. There's an indoor pool, a little shop, wifi and a power socket on every pitch. The tents are ours: if you have one, bring it; if you don't, you get a spot in someone else's. All of that gets sorted in the form.",
+    nl:"Op het park: <b>1 grote tent + 1 kleine per plaats</b>, <b>1 auto per plaats</b> (de rest op de centrale parkeerplaats), en het park staat tot 6 mensen per plaats toe, maar met één grote en één kleine tent is het echte aantal <b>4 of 5</b>. We reserveren <b>zoveel plaatsen als we nodig hebben</b>: hoe meer mensen bevestigen, hoe meer plaatsen naast elkaar. Er is een overdekt zwembad, een winkeltje, wifi en een stopcontact op elke plaats. De tenten zijn van onszelf: heb je er een, neem hem mee; heb je er geen, dan krijg je een plekje bij iemand anders. Dat regelen we allemaal via het formulier." },
+
+  "custo.kicker": { pt:"Quanto custa", en:"What it costs", nl:"Wat het kost" },
+  "custo.h": {
+    pt:"{prices.total} por pessoa, tudo incluído",
+    en:"{prices.total} per person, everything in",
+    nl:"{prices.total} per persoon, alles inbegrepen" },
+  "custo.sub": {
+    pt:"Três dias na praia, dormida, transporte e o casamento no meio. Tudo a preço de custo: eu junto tudo e divido pelo número de gente. Preferi chutar pra cima, então se sobrar, sobra a favor.",
+    en:"Three days at the beach, somewhere to sleep, transport and a wedding in the middle. All at cost: I add it up and divide by the number of us. I've rounded generously upwards, so if anything is left over, it's left over in your favour.",
+    nl:"Drie dagen strand, een slaapplek, vervoer en een bruiloft ertussen. Alles tegen kostprijs: ik tel het bij elkaar op en deel door het aantal mensen. Ik heb ruim naar boven geschat, dus als er iets overblijft, blijft het in jouw voordeel over." },
+  "custo.est": { pt:"estimativa", en:"estimate", nl:"schatting" },
+  "custo.c1": { pt:"Camping", en:"Campsite", nl:"Camping" },
+  "custo.c1d": {
+    pt:"2 noites · pitch de €144 dividido por 4 ou 5 pessoas",
+    en:"2 nights · a €144 pitch split between 4 or 5 people",
+    nl:"2 nachten · een plaats van €144 gedeeld door 4 of 5 mensen" },
+  "custo.c2": { pt:"Carona", en:"The lift", nl:"De rit" },
+  "custo.c2d": {
+    pt:"gasolina rachada + tanque de agradecimento pra quem dirige (ou a van, se precisar)",
+    en:"petrol split + a thank-you tank for whoever drives (or the van, if we need one)",
+    nl:"benzine gedeeld + een tank als dankjewel voor wie rijdt (of het busje, als dat nodig is)" },
+  "custo.c3": { pt:"Ida ao casamento", en:"Getting to the wedding", nl:"Naar de bruiloft" },
+  "custo.c3d": {
+    pt:"táxi (~{taxiPrice}) ou bike ({bikePrice}), ida e volta na quinta",
+    en:"taxi (~{taxiPrice}) or bike ({bikePrice}), there and back on Thursday",
+    nl:"taxi (~{taxiPrice}) of fiets ({bikePrice}), heen en terug op donderdag" },
+  "custo.c4": { pt:"Comida", en:"Food", nl:"Eten" },
+  "custo.c4d": {
+    pt:"jantar de quarta + cafés (na quinta o jantar é no casamento)",
+    en:"Wednesday dinner + coffees (Thursday's dinner is at the wedding)",
+    nl:"diner op woensdag + koffies (het diner op donderdag is op de bruiloft)" },
+  "custo.totalK": {
+    pt:"por pessoa, os 3 dias",
+    en:"per person, all 3 days",
+    nl:"per persoon, alle 3 dagen" },
+  "custo.totalD": {
+    pt:"Depende de quantas pessoas por pitch e por carro. Com os pitches cheios (5) e as caronas cheias fica mais perto de €65.",
+    en:"It depends how many people per pitch and per car. With full pitches (5) and full cars it lands closer to €65.",
+    nl:"Het hangt af van hoeveel mensen per plaats en per auto. Met volle plaatsen (5) en volle auto's komt het dichter bij €65." },
+
+  "pag.h": {
+    pt:"Como o dinheiro funciona:",
+    en:"How the money works:",
+    nl:"Hoe het met het geld zit:" },
+  "pag.l1": {
+    pt:"<b>Agora você não paga nada.</b> Só preenche o formulário.",
+    en:"<b>You pay nothing now.</b> You just fill in the form.",
+    nl:"<b>Je betaalt nu niets.</b> Je vult alleen het formulier in." },
+  "pag.l2": {
+    pt:"{deadlineShort} o grupo fecha, eu reservo os pitches e pago com meu cartão.",
+    en:"On {deadlineShort} the group closes, I book the pitches and pay with my card.",
+    nl:"Op {deadlineShort} sluit de groep, ik reserveer de plaatsen en betaal met mijn pas." },
+  "pag.l3": {
+    pt:"Aí mando um <b>Tikkie no grupo</b>: custo real ÷ número de gente. Sem taxa, sem lucro, sem mistério.",
+    en:"Then I send a <b>Tikkie in the group</b>: real cost ÷ number of people. No fee, no profit, no mystery.",
+    nl:"Daarna stuur ik een <b>Tikkie in de groep</b>: echte kosten ÷ aantal mensen. Geen toeslag, geen winst, geen mysterie." },
+  "pag.l4": {
+    pt:"No final eu posto a conta inteira no grupo: o que entrou, o que saiu, o que sobrou.",
+    en:"At the end I post the whole account in the group: what came in, what went out, what was left.",
+    nl:"Aan het eind post ik de hele afrekening in de groep: wat erin kwam, wat eruit ging, wat er overbleef." },
+
+  "part.kicker": { pt:"Como participar", en:"How to join", nl:"Hoe je meedoet" },
+  "part.h": {
+    pt:"Cinco passos e você tá dentro",
+    en:"Five steps and you're in",
+    nl:"Vijf stappen en je doet mee" },
+  "p1.t": { pt:"Preenche o formulário", en:"Fill in the form", nl:"Vul het formulier in" },
+  "p1.d": {
+    pt:"Dois minutos. Diz se tem carro, se tem barraca, e o que você precisa emprestado.",
+    en:"Two minutes. Say whether you have a car, whether you have a tent, and what you need to borrow.",
+    nl:"Twee minuten. Zeg of je een auto hebt, of je een tent hebt, en wat je wilt lenen." },
+  "p2.t": { pt:"Entra no grupo", en:"Join the group", nl:"Kom in de groep" },
+  "p2.d": {
+    pt:"O link aparece na tela de confirmação. É lá que tudo se combina.",
+    en:"The link shows up on the confirmation screen. That's where everything gets arranged.",
+    nl:"De link verschijnt op het bevestigingsscherm. Daar regelen we alles." },
+  "p3.t": {
+    pt:"{deadlineShort} o grupo fecha",
+    en:"The group closes {deadlineShort}",
+    nl:"De groep sluit {deadlineShort}" },
+  "p3.d": {
+    pt:"Aí eu sei quantos somos, reservo os pitches e fecho o táxi.",
+    en:"Then I know how many we are, I book the pitches and lock in the taxi.",
+    nl:"Dan weet ik met hoeveel we zijn, reserveer ik de plaatsen en leg ik de taxi vast." },
+  "p4.t": { pt:"Tikkie no grupo", en:"Tikkie in the group", nl:"Tikkie in de groep" },
+  "p4.d": {
+    pt:"Custo real dividido, alguns dias depois da reserva.",
+    en:"The real cost divided up, a few days after the booking.",
+    nl:"De echte kosten gedeeld, een paar dagen na de reservering." },
+  "p5.t": {
+    pt:"Semana antes: o que levar",
+    en:"The week before: what to bring",
+    nl:"De week ervoor: wat je meeneemt" },
+  "p5.d": {
+    pt:"Lista de equipamento, quem vai em qual carro, mapa dos pitches.",
+    en:"Kit list, who goes in which car, map of the pitches.",
+    nl:"Uitrustingslijst, wie in welke auto gaat, plattegrond van de plaatsen." },
+
+  "prazo.h": {
+    pt:"Responde até domingo, 2 de agosto",
+    en:"Reply by Sunday 2 August",
+    nl:"Reageer vóór zondag 2 augustus" },
+  "prazo.p": {
+    pt:"Depois disso não dá mais: reservo o camping logo em seguida, e a essa altura a reserva não é reembolsável.",
+    en:"After that it's too late: I book the campsite right afterwards, and at that point the booking is non-refundable.",
+    nl:"Daarna kan het niet meer: ik reserveer de camping direct erna, en vanaf dat moment is de boeking niet meer terug te draaien." },
+
+  "crew.kicker": { pt:"A parede da camping crew", en:"The camping crew wall", nl:"De muur van de camping crew" },
+  "crew.h": { pt:"Quem já tá dentro", en:"Who's in already", nl:"Wie er al bij zijn" },
+  "crew.sub": {
+    pt:"Cada “eu vou” vira um nome aqui. Preenche o formulário e aparece nesta parede.",
+    en:"Every “I'm coming” turns into a name here. Fill in the form and you appear on this wall.",
+    nl:"Elke “ik ga mee” wordt hier een naam. Vul het formulier in en je verschijnt op deze muur." },
+  "crew.you": { pt:"seu nome aqui", en:"your name here", nl:"jouw naam hier" },
+  "crew.andYou": { pt:"e o seu", en:"and yours", nl:"en die van jou" },
+  "crew.count": {
+    pt:"{n} confirmados · atualizado {d}",
+    en:"{n} confirmed · updated {d}",
+    nl:"{n} bevestigd · bijgewerkt {d}" },
+  "crew.legenda": {
+    pt:"Os selinhos: <code>⛺ vou!</code> · <code>🚗 tenho carro</code> · <code>🚐 topo dirigir van</code> · <code>🎪 tenho barraca</code> · <code>🛒 preciso de equipo</code>. Tudo isso sai direto do que você marcar no formulário. Só o primeiro nome aparece aqui, nada mais.",
+    en:"The badges: <code>⛺ I'm in!</code> · <code>🚗 I have a car</code> · <code>🚐 happy to drive a van</code> · <code>🎪 I have a tent</code> · <code>🛒 need to borrow kit</code>. All of it comes straight from what you tick in the form. Only your first name appears here, nothing else.",
+    nl:"De badges: <code>⛺ ik ga mee!</code> · <code>🚗 ik heb een auto</code> · <code>🚐 wil wel een busje rijden</code> · <code>🎪 ik heb een tent</code> · <code>🛒 spullen nodig</code>. Dat komt allemaal rechtstreeks uit wat je in het formulier aankruist. Alleen je voornaam staat hier, verder niets." },
+
+  /* de selinhos da parede: /crew-wall escreve os tokens, aqui eles viram texto */
+  "badge.go":     { pt:"⛺ vou!", en:"⛺ I'm in!", nl:"⛺ ik ga mee!" },
+  "badge.thu":    { pt:"🌙 só quinta", en:"🌙 Thursday only", nl:"🌙 alleen donderdag" },
+  "badge.car":    { pt:"🚗 tenho carro", en:"🚗 I have a car", nl:"🚗 ik heb een auto" },
+  "badge.seats":  { pt:"({n} lugares)", en:"({n} seats)", nl:"({n} plekken)" },
+  "badge.van":    { pt:"🚐 topo dirigir van", en:"🚐 happy to drive a van", nl:"🚐 wil wel een busje rijden" },
+  "badge.vanThu": { pt:"🚐 traz a van na quinta", en:"🚐 brings the van on Thursday", nl:"🚐 brengt donderdag het busje" },
+  "badge.tent":   { pt:"🎪 tenho barraca", en:"🎪 I have a tent", nl:"🎪 ik heb een tent" },
+  "badge.gear":   { pt:"🛒 preciso de equipo", en:"🛒 need to borrow kit", nl:"🛒 spullen nodig" },
+
+  "faq.kicker": { pt:"Perguntas", en:"Questions", nl:"Vragen" },
+  "faq.h": {
+    pt:"O que todo mundo pergunta",
+    en:"What everyone asks",
+    nl:"Wat iedereen vraagt" },
+
+  "q.folga": { pt:"Preciso tirar folga?", en:"Do I need to take time off?", nl:"Moet ik vrij nemen?" },
+  "a.folga": {
+    pt:"Quarta e sexta são dias úteis, então a maioria vai tirar dois dias. Se você só consegue um, tudo bem, dá pra chegar na quinta (veja abaixo).",
+    en:"Wednesday and Friday are working days, so most people will take two days off. If you can only manage one, that's fine, you can arrive on Thursday (see below).",
+    nl:"Woensdag en vrijdag zijn werkdagen, dus de meesten nemen twee dagen vrij. Lukt er maar één, ook prima, je kunt donderdag aankomen (zie hieronder)." },
+
+  "q.soquinta": {
+    pt:"Posso ir só na quinta, do casamento?",
+    en:"Can I come just on Thursday, for the wedding?",
+    nl:"Kan ik alleen donderdag komen, voor de bruiloft?" },
+  "a.soquinta": {
+    pt:"Dá sim. Marca isso no formulário: você entra na divisão de uma noite só e paga bem menos. A gente encaixa você numa barraca e numa carona igual.",
+    en:"You can. Tick that in the form: you go into the one-night split and pay a lot less. We'll still fit you into a tent and into a car.",
+    nl:"Dat kan. Kruis dat aan in het formulier: je valt dan onder de verdeling van één nacht en betaalt een stuk minder. We passen je nog steeds in bij een tent en in een auto." },
+
+  "q.barraca": { pt:"Não tenho barraca.", en:"I don't have a tent.", nl:"Ik heb geen tent." },
+  "a.barraca": {
+    pt:"Marca no formulário que precisa de vaga. Quem tem barraca grande traz, e a gente distribui as vagas antes de subir. Ninguém fica de fora por causa disso. Se você tiver saco de dormir ou isolante pra emprestar, marca também: metade do equipamento vai ser emprestado entre a gente.",
+    en:"Tick in the form that you need a spot. Whoever has a big tent brings it, and we hand out the spots before we head up. Nobody misses out over this. If you have a sleeping bag or a mat to lend, tick that too: half the kit is going to be borrowed between us.",
+    nl:"Geef in het formulier aan dat je een plekje nodig hebt. Wie een grote tent heeft neemt hem mee, en we verdelen de plekken voordat we vertrekken. Hier valt niemand om af. Heb je een slaapzak of matje te leen, vink dat dan ook aan: de helft van de spullen lenen we van elkaar." },
+
+  "q.carro": { pt:"Não tenho carro nem carteira.", en:"I have no car and no licence.", nl:"Ik heb geen auto en geen rijbewijs." },
+  "a.carro": {
+    pt:"Sem problema, a maioria não tem. Marca “não tenho carro” e eu te encaixo numa carona. As caronas só são montadas depois que o grupo fechar, quando eu sei quem vai e quantos lugares sobram.",
+    en:"No problem, most people don't. Tick “no car” and I'll fit you into a lift. The lifts only get put together after the group closes, once I know who's coming and how many seats are free.",
+    nl:"Geen probleem, de meesten hebben dat niet. Vink “geen auto” aan en ik deel je in bij een rit. De ritindeling maak ik pas nadat de groep sluit, als ik weet wie er meegaat en hoeveel plekken vrij zijn." },
+
+  "q.dirige": {
+    pt:"E ninguém dirige mesmo na quinta?",
+    en:"And really nobody drives on Thursday?",
+    nl:"En echt niemand rijdt op donderdag?" },
+  "a.dirige": {
+    pt:"<p>Ninguém. São 2,5 km e a festa vai até meia-noite, então não tem “um motorista”, tem duas opções pagas por todo mundo: o <b>táxi da vila</b> (opção principal, ~{taxiPrice} por pessoa ida e volta) ou <b>bike</b> ({bikePrice} pelos dois dias).</p><p>Fecho o táxi assim que souber quantos somos. Quem preferir bike pode pegar bike de qualquer jeito.</p>",
+    en:"<p>Nobody. It's 2.5 km and the party runs until midnight, so there is no “designated driver”, there are two options everyone pays for: the <b>village taxi</b> (main option, ~{taxiPrice} per person there and back) or a <b>bike</b> ({bikePrice} for the two days).</p><p>I'll lock in the taxi as soon as I know how many we are. Anyone who prefers a bike can take one anyway.</p>",
+    nl:"<p>Niemand. Het is 2,5 km en het feest duurt tot middernacht, dus er is geen “bob”, er zijn twee opties die iedereen samen betaalt: de <b>dorpstaxi</b> (hoofdoptie, ~{taxiPrice} per persoon heen en terug) of een <b>fiets</b> ({bikePrice} voor de twee dagen).</p><p>Ik leg de taxi vast zodra ik weet met hoeveel we zijn. Wie liever fietst, kan sowieso een fiets pakken.</p>" },
+
+  "q.alguem": { pt:"Posso levar alguém?", en:"Can I bring someone?", nl:"Mag ik iemand meenemen?" },
+  "a.alguem": {
+    pt:"Pode, se a pessoa também estiver convidada pro casamento. Coloca o nome dela nas observações do formulário pra eu contar as vagas certo e reservar pitch suficiente.",
+    en:"You can, as long as they're also invited to the wedding. Put their name in the notes field of the form so I count the spots correctly and book enough pitches.",
+    nl:"Dat mag, zolang diegene ook is uitgenodigd voor de bruiloft. Zet hun naam bij de opmerkingen in het formulier, dan tel ik de plekken goed en reserveer ik genoeg plaatsen." },
+
+  "q.desistir": {
+    pt:"E se eu disser sim e depois desistir?",
+    en:"What if I say yes and then drop out?",
+    nl:"Wat als ik ja zeg en dan afhaak?" },
+  "a.desistir": {
+    pt:"<p><b>Até {deadlineShort}:</b> muda de ideia à vontade, é só me mandar mensagem, zero drama.</p><p><b>Depois disso:</b> eu já reservei e paguei os pitches, e a essa altura o parque não devolve nada. Então o Tikkie vale. Se acontecer alguma coisa séria, me chama que a gente dá um jeito. E se você achar alguém pra ocupar sua vaga, melhor ainda.</p>",
+    en:"<p><b>Until {deadlineShort}:</b> change your mind freely, just message me, zero drama.</p><p><b>After that:</b> I've already booked and paid for the pitches, and by then the park refunds nothing. So the Tikkie stands. If something serious comes up, message me and we'll work it out. And if you find someone to take your spot, even better.</p>",
+    nl:"<p><b>Tot {deadlineShort}:</b> verander gerust van gedachten, stuur me even een berichtje, geen enkel gedoe.</p><p><b>Daarna:</b> ik heb de plaatsen al gereserveerd en betaald, en op dat moment geeft het park niets meer terug. Dus de Tikkie blijft staan. Gebeurt er iets ernstigs, app me dan en we vinden er wel iets op. En vind je iemand die jouw plek overneemt, nog beter.</p>" },
+
+  "q.grana": {
+    pt:"Tô apertada de grana esse mês.",
+    en:"Money is tight for me this month.",
+    nl:"Ik zit deze maand krap bij kas." },
+  "a.grana": {
+    pt:"Me chama no privado. Sério. A gente resolve: parcelar, ajustar, o que for. Ninguém fica de fora dessa por causa de dinheiro. 💛",
+    en:"Message me privately. Seriously. We'll sort it: spread it out, adjust it, whatever works. Nobody misses this over money. 💛",
+    nl:"App me privé. Echt. We lossen het op: in delen betalen, aanpassen, wat er ook nodig is. Niemand mist dit vanwege geld. 💛" },
+
+  "q.vagas": { pt:"Quantas vagas tem?", en:"How many spots are there?", nl:"Hoeveel plekken zijn er?" },
+  "a.vagas": {
+    pt:"<p>Depende de quantos a gente for! Cada pitch dá pra 4 ou 5 pessoas (1 barraca grande + 1 pequena), e eu reservo <b>quantos pitches precisar</b>, sempre lado a lado. Por isso o prazo importa: quanto antes você confirmar, mais fácil garantir todo mundo junto.</p>",
+    en:"<p>It depends how many of us there are! Each pitch takes 4 or 5 people (1 big tent + 1 small one), and I book <b>as many pitches as we need</b>, always side by side. That's why the deadline matters: the sooner you confirm, the easier it is to keep everyone together.</p>",
+    nl:"<p>Dat hangt af van met hoeveel we zijn! Op elke plaats passen 4 of 5 mensen (1 grote tent + 1 kleine), en ik reserveer <b>zoveel plaatsen als we nodig hebben</b>, altijd naast elkaar. Daarom telt de deadline: hoe eerder je bevestigt, hoe makkelijker het is om iedereen bij elkaar te houden.</p>" },
+
+  "q.coisas": { pt:"Como eu levo minhas coisas?", en:"How do I get my stuff there?", nl:"Hoe krijg ik mijn spullen daar?" },
+  "a.coisas": {
+    pt:"No carro da carona. Barraca, saco de dormir, caixa térmica, cadeira, tudo sobe junto na quarta de manhã. Se você tem equipamento pra emprestar pra camping crew, marca no formulário que eu monto a lista do que ainda falta.",
+    en:"In the car you're sharing. Tent, sleeping bag, cool box, chair, it all goes up together on Wednesday morning. If you have kit to lend the camping crew, tick it in the form and I'll build the list of what's still missing.",
+    nl:"In de auto waar je in meerijdt. Tent, slaapzak, koelbox, stoel, het gaat woensdagochtend allemaal samen mee. Heb je spullen om aan de camping crew te lenen, vink dat aan in het formulier, dan maak ik de lijst van wat er nog ontbreekt." },
+
+  "ct.kicker": { pt:"Qualquer dúvida", en:"Any questions", nl:"Vragen?" },
+  "ct.h": { pt:"Fala com a Helena", en:"Talk to Helena", nl:"Praat met Helena" },
+  "ct.p": {
+    pt:"WhatsApp, de preferência: tô com muita coisa desse casamento na mão e nem sempre consigo atender. Se eu demorar um pouco pra responder, não some: eu chego lá. 💛",
+    en:"WhatsApp preferably: I'm holding a lot of this wedding in my hands and I can't always pick up. If I take a while to reply, don't disappear: I'll get there. 💛",
+    nl:"Het liefst WhatsApp: ik heb een groot deel van deze bruiloft in handen en kan niet altijd opnemen. Duurt mijn antwoord even, verdwijn dan niet: ik kom er wel. 💛" },
+
+  "foot.note": {
+    pt:"Camping do casamento da Maeli &amp; Marieke · {campsite}, Voorweg 5a, Callantsoog · {campRange} de 2026. Página feita pela Helena (com o Claudinho 🤖) pra organizar o camping da nossa turma. Preços verificados em 22/07/2026 (Callassande · Harry's Tweewielers · Taxi Callantsoog).",
+    en:"Maeli &amp; Marieke's wedding camping · {campsite}, Voorweg 5a, Callantsoog · {campRange} 2026. Page made by Helena (with Claudinho 🤖) to organise our crowd's camping trip. Prices checked on 22/07/2026 (Callassande · Harry's Tweewielers · Taxi Callantsoog).",
+    nl:"Kamperen bij de bruiloft van Maeli &amp; Marieke · {campsite}, Voorweg 5a, Callantsoog · {campRange} 2026. Pagina gemaakt door Helena (met Claudinho 🤖) om het kamperen van onze groep te regelen. Prijzen gecheckt op 22-07-2026 (Callassande · Harry's Tweewielers · Taxi Callantsoog)." }
+};
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Engine. Igual à do hub, sem o splash: esta página é aberta direto de uma
+   mensagem no WhatsApp, então nunca pode colocar uma tela na frente do
+   botão de inscrição. O idioma é adivinhado, e daí é só trocar.
+   ═══════════════════════════════════════════════════════════════════════ */
+const LANGS = ["pt","en","nl"];
+const KEY = "mm-lang";          /* a mesma chave que o hub escreve, de propósito */
+const FALLBACK = "pt";          /* a turma é brasileira: português é o padrão daqui */
+
+/** Resolve "prices.camp" / "campDates" em FACTS, escolhendo a variante do idioma. */
+function fact(path, lang){
+  let v = path.split(".").reduce((o,k)=> (o==null ? o : o[k]), FACTS);
+  if (v && typeof v === "object" && !Array.isArray(v)) v = v[lang];
+  return v == null ? "" : String(v);
+}
+
+/** Preenche {placeholders} a partir de FACTS. */
+function fill(str, lang){
+  return str.replace(/\{([a-zA-Z0-9_.]+)\}/g, (_, p) => fact(p, lang));
+}
+
+function t(key, lang){
+  const e = COPY[key];
+  if (!e) return "";
+  return fill(e[lang] ?? e.pt ?? "", lang);
+}
+
+/** The copy string with NO {placeholder} filling. Used by the crew wall, whose
+    {n} and {d} come from the wall's own attributes, not from FACTS: running
+    fill() over them first would blank them out. */
+function raw(key, lang){
+  const e = COPY[key];
+  return e ? (e[lang] ?? e.pt ?? "") : "";
+}
+
+/* A parede da camping crew é gerada pelo comando /crew-wall, que escreve
+   tokens em data-badges (go, thu, car, car:4, van, vanThu, tent, gear).
+   Aqui os tokens viram texto no idioma escolhido, então a parede fala
+   português, inglês e holandês sem o comando saber de idioma nenhum. */
+function renderCrew(lang){
+  document.querySelectorAll("[data-badges]").forEach(el => {
+    el.textContent = el.dataset.badges.split(",")
+      .map(s => s.trim()).filter(Boolean)
+      .map(token => {
+        const [name, arg] = token.split(":");
+        let out = t("badge." + name, lang);
+        if (!out) return "";
+        if (name === "car" && arg) out += " " + raw("badge.seats", lang).replace("{n}", arg);
+        return out;
+      })
+      .filter(Boolean).join(" · ");
+  });
+  document.querySelectorAll(".contador").forEach(el => {
+    el.textContent = raw("crew.count", lang)
+      .replace("{n}", el.dataset.count || "0")
+      .replace("{d}", el.dataset.updated || "");
+  });
+}
+
+function applyLang(lang){
+  if (!LANGS.includes(lang)) lang = FALLBACK;
+  document.documentElement.lang = (lang === "pt") ? "pt-BR" : lang;
+  document.title = t("meta.title", lang);
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    el.textContent = t(el.dataset.i18n, lang);
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    el.innerHTML = t(el.dataset.i18nHtml, lang);
+  });
+  document.querySelectorAll("[data-f]").forEach(el => {
+    el.textContent = fact(el.dataset.f, lang);
+  });
+
+  renderCrew(lang);
+  wireLinks(lang);
+
+  document.querySelectorAll(".switch button").forEach(b => {
+    b.setAttribute("aria-current", String(b.dataset.lang === lang));
+  });
+
+  try { localStorage.setItem(KEY, lang); } catch(e){}
+  const u = new URL(location.href);
+  u.searchParams.set("lang", lang);
+  history.replaceState(null, "", u);
+}
+
+/* Os links fixos, e os que carregam o idioma pra página seguinte.
+   Roda depois de cada troca de idioma, porque data-i18n-html reescreve
+   o parágrafo que contém o link do ônibus. */
+function wireLinks(lang){
+  document.querySelectorAll("[data-link]").forEach(el => {
+    el.href = FACTS.links[el.dataset.link];
+  });
+  document.querySelectorAll("[data-langlink]").forEach(el => {
+    el.href = FACTS.links[el.dataset.langlink] + "?lang=" + lang;
+    el.target = "_blank";
+    el.rel = "noopener";
+  });
+}
+
+/* ?lang= ganha (é assim que o hub entrega o visitante), depois o idioma que a
+   pessoa já escolheu, depois o navegador, depois português. */
+function pickLang(){
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q && LANGS.includes(q)) return q;
+  let saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+  if (saved && LANGS.includes(saved)) return saved;
+  const nav = (navigator.language || FALLBACK).slice(0,2).toLowerCase();
+  return LANGS.includes(nav) ? nav : FALLBACK;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  applyLang(pickLang());
+  document.querySelectorAll(".switch button").forEach(b => {
+    b.addEventListener("click", () => applyLang(b.dataset.lang));
+  });
+});
+</script>
 </body>
 </html>
