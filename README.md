@@ -1,10 +1,27 @@
 # wedding-camping
 
-One page, in Portuguese, for the friends camping around Maeli & Marieke's wedding at Vakantiepark Callassande, Callantsoog, Wed 26 to Fri 28 August 2026.
+One page, in **Portuguese, English and Dutch**, for the friends camping around Maeli & Marieke's wedding at Vakantiepark Callassande, Callantsoog, Wed 26 to Fri 28 August 2026.
 
 Live: **https://aboutcollab.github.io/wedding-camping/**
 
 Made by Helena (+31 6 8640 9404), a friend of the couple, to organise the camping trip. Sign-ups go through a Google Form; the list lives in a private Sheet.
+
+## Three languages, one copy table
+
+Portuguese, English and Dutch, switched from the PT/EN/NL pills in the top bar. Same pattern
+as the hub and the coach page:
+
+- **`FACTS`** holds every hard fact once (dates, the deadline, the prices, the form URL).
+  Change `FACTS.deadline` and all three languages follow. **Never retype a fact in `COPY`.**
+- **`COPY`** holds the words, three languages on adjacent lines, with `{placeholders}` filled
+  from `FACTS`.
+- Portuguese is the original and the fallback. The language is picked from `?lang=` first
+  (that is how the hub hands a visitor over), then what they chose before, then the browser,
+  then Portuguese.
+- **The crew wall is language-aware.** `/crew-wall` writes badge *tokens*, not words: see
+  the crew wall section below.
+- The outbound link to the coach page carries the current language, so nobody switches to
+  Dutch here and lands on an English coach page.
 
 ## Rules for this repo
 
